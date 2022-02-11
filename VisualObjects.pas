@@ -1,7 +1,7 @@
-{$REGION ' Описание VisualObjects'}
-  /// <summary> Графические объекты </summary>
+{$REGION ' РћРїРёСЃР°РЅРёРµ VisualObjects'}
+  /// <summary> Р“СЂР°С„РёС‡РµСЃРєРёРµ РѕР±СЉРµРєС‚С‹ </summary>
   /// <author> evdokimov_v_i </author>
-{$ENDREGION ' Описание VisualObjects'}
+{$ENDREGION ' РћРїРёСЃР°РЅРёРµ VisualObjects'}
 unit VisualObjects;
 
 interface
@@ -14,99 +14,99 @@ uses
   OPL_utils;
 
 const
-  /// Области объектов
-  {$REGION ' Описание HT_OUT'}
-    /// <summary> вне объекта </summary>
+  /// РћР±Р»Р°СЃС‚Рё РѕР±СЉРµРєС‚РѕРІ
+  {$REGION ' РћРїРёСЃР°РЅРёРµ HT_OUT'}
+    /// <summary> РІРЅРµ РѕР±СЉРµРєС‚Р° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание HT_OUT'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ HT_OUT'}
   HT_OUT          = $00000000;
-  {$REGION ' Описание HT_IN'}
-    /// <summary> внутренняя область объекта </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ HT_IN'}
+    /// <summary> РІРЅСѓС‚СЂРµРЅРЅСЏСЏ РѕР±Р»Р°СЃС‚СЊ РѕР±СЉРµРєС‚Р° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание HT_IN'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ HT_IN'}
   HT_IN           = $80000000;
-  {$REGION ' Описание HT_VERTEX'}
-    /// <summary> вершина </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ HT_VERTEX'}
+    /// <summary> РІРµСЂС€РёРЅР° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание HT_VERTEX'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ HT_VERTEX'}
   HT_VERTEX       = $40000000;
-  {$REGION ' Описание HT_SIDE'}
-    /// <summary> сторона </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ HT_SIDE'}
+    /// <summary> СЃС‚РѕСЂРѕРЅР° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание HT_SIDE'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ HT_SIDE'}
   HT_SIDE         = $20000000;
 
-  /// Виды курсора
-  {$REGION ' Описание CR_DEFAULT'}
+  /// Р’РёРґС‹ РєСѓСЂСЃРѕСЂР°
+  {$REGION ' РћРїРёСЃР°РЅРёРµ CR_DEFAULT'}
     /// <summary> CR_DEFAULT </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание CR_DEFAULT'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CR_DEFAULT'}
   CR_DEFAULT      = 0;
-  {$REGION ' Описание CR_SIZEALL'}
+  {$REGION ' РћРїРёСЃР°РЅРёРµ CR_SIZEALL'}
     /// <summary> CR_SIZEALL </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание CR_SIZEALL'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CR_SIZEALL'}
   CR_SIZEALL      = 1;
-  {$REGION ' Описание CR_HORIZONTAL'}
+  {$REGION ' РћРїРёСЃР°РЅРёРµ CR_HORIZONTAL'}
     /// <summary> CR_HORIZONTAL </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание CR_HORIZONTAL'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CR_HORIZONTAL'}
   CR_HORIZONTAL   = 2;
-  {$REGION ' Описание CR_VERTICAL'}
+  {$REGION ' РћРїРёСЃР°РЅРёРµ CR_VERTICAL'}
     /// <summary> CR_VERTICAL </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание CR_VERTICAL'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CR_VERTICAL'}
   CR_VERTICAL     = 3;
-  {$REGION ' Описание CR_DIAG1'}
+  {$REGION ' РћРїРёСЃР°РЅРёРµ CR_DIAG1'}
     /// <summary> CR_DIAG1 </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание CR_DIAG1'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CR_DIAG1'}
   CR_DIAG1        = 4;
-  {$REGION ' Описание CR_DIAG2'}
+  {$REGION ' РћРїРёСЃР°РЅРёРµ CR_DIAG2'}
     /// <summary> CR_DIAG2 </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание CR_DIAG2'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CR_DIAG2'}
   CR_DIAG2        = 5;   
 
-  {$REGION ' Описание INACTIVE_OBJECT_COLOR'}
-    /// <summary> Цвет неактивного объекта </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ INACTIVE_OBJECT_COLOR'}
+    /// <summary> Р¦РІРµС‚ РЅРµР°РєС‚РёРІРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание INACTIVE_OBJECT_COLOR'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ INACTIVE_OBJECT_COLOR'}
   INACTIVE_OBJECT_COLOR = clSilver;
 
-  {$REGION ' Описание MULTISELECT_COLOR'}
-    /// <summary> Цвет выделения объектов при множественном выделении </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ MULTISELECT_COLOR'}
+    /// <summary> Р¦РІРµС‚ РІС‹РґРµР»РµРЅРёСЏ РѕР±СЉРµРєС‚РѕРІ РїСЂРё РјРЅРѕР¶РµСЃС‚РІРµРЅРЅРѕРј РІС‹РґРµР»РµРЅРёРё </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание MULTISELECT_COLOR'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MULTISELECT_COLOR'}
   MULTISELECT_COLOR = clGray;
 
 type
-  {$REGION ' Описание TConnectionLine'}
-    /// <summary> Предварительное объявление класса TConnectionLine </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TConnectionLine'}
+    /// <summary> РџСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕРµ РѕР±СЉСЏРІР»РµРЅРёРµ РєР»Р°СЃСЃР° TConnectionLine </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TConnectionLine'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TConnectionLine'}
   TConnectionLine = class;
 
-  {$REGION ' Описание PHitTestParams'}
-    /// <summary> указатель на параметры для определения области объекта </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ PHitTestParams'}
+    /// <summary> СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РѕР±Р»Р°СЃС‚Рё РѕР±СЉРµРєС‚Р° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание PHitTestParams'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ PHitTestParams'}
   PHitTestParams = ^THitTestParams;
-  {$REGION ' Описание THitTestParams'}
-    /// <summary> параметры для определения области объекта </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ THitTestParams'}
+    /// <summary> РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РѕР±Р»Р°СЃС‚Рё РѕР±СЉРµРєС‚Р° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание THitTestParams'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ THitTestParams'}
   THitTestParams = record
-    XPos, YPos: Integer;  // Позиция в экранных единицах
-    Tolerance: Integer;   // Чувствительность
+    XPos, YPos: Integer;  // РџРѕР·РёС†РёСЏ РІ СЌРєСЂР°РЅРЅС‹С… РµРґРёРЅРёС†Р°С…
+    Tolerance: Integer;   // Р§СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ
   end;
 
   //
 
-  {$REGION ' Описание TComplexDrawParams'}
-    /// <summary> Параметры рисования объекта в составе сложного </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TComplexDrawParams'}
+    /// <summary> РџР°СЂР°РјРµС‚СЂС‹ СЂРёСЃРѕРІР°РЅРёСЏ РѕР±СЉРµРєС‚Р° РІ СЃРѕСЃС‚Р°РІРµ СЃР»РѕР¶РЅРѕРіРѕ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TComplexDrawParams'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TComplexDrawParams'}
   TComplexDrawParams = record
     Canvas: TLogicalCanvas;
     IsActive: boolean;
@@ -114,10 +114,10 @@ type
   end;
 
   //
-  {$REGION ' Описание TBaseVisualObject'}
-    /// <summary> Базовый класс визуальных объектов </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TBaseVisualObject'}
+    /// <summary> Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РІРёР·СѓР°Р»СЊРЅС‹С… РѕР±СЉРµРєС‚РѕРІ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TBaseVisualObject'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TBaseVisualObject'}
   TBaseVisualObject = class(TObject)
   private
     FBasePoints: TList;
@@ -164,14 +164,14 @@ type
     procedure DrawAsSelected(Canvas: TLogicalCanvas);
     //
     procedure Change(Sender: integer = 0);
-    // Методы управления базовыми точками. Только для использования в потомках,
-    // клиентскому коду они не доступны
+    // РњРµС‚РѕРґС‹ СѓРїСЂР°РІР»РµРЅРёСЏ Р±Р°Р·РѕРІС‹РјРё С‚РѕС‡РєР°РјРё. РўРѕР»СЊРєРѕ РґР»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РІ РїРѕС‚РѕРјРєР°С…,
+    // РєР»РёРµРЅС‚СЃРєРѕРјСѓ РєРѕРґСѓ РѕРЅРё РЅРµ РґРѕСЃС‚СѓРїРЅС‹
     procedure AddBasePoint(X, Y: Extended);
     procedure InsertBasePoint(Index: Integer; X, Y: Extended);
     procedure DeleteBasePoint(Index: Integer);
     procedure ClearBasePoints;
-    // Методы управления вершинами. Соответствие между вершинами и базовыми точками
-    // будет задано в потомках
+    // РњРµС‚РѕРґС‹ СѓРїСЂР°РІР»РµРЅРёСЏ РІРµСЂС€РёРЅР°РјРё. РЎРѕРѕС‚РІРµС‚СЃС‚РІРёРµ РјРµР¶РґСѓ РІРµСЂС€РёРЅР°РјРё Рё Р±Р°Р·РѕРІС‹РјРё С‚РѕС‡РєР°РјРё
+    // Р±СѓРґРµС‚ Р·Р°РґР°РЅРѕ РІ РїРѕС‚РѕРјРєР°С…
     function GetVertexesCount: Integer; virtual; abstract;
     function GetVertex(Index: Integer): TFloatPoint; virtual; abstract;
     procedure SetVertex(Index: Integer; const Value: TFloatPoint); virtual; abstract;
@@ -184,463 +184,463 @@ type
     //
     procedure SetRotation(Value: integer); virtual;
   public
-    {$REGION ' Описание TypeName'}
-      /// <summary> Название типа объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ TypeName'}
+      /// <summary> РќР°Р·РІР°РЅРёРµ С‚РёРїР° РѕР±СЉРµРєС‚Р° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание TypeName'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TypeName'}
     TypeName: string;
-    {$REGION ' Описание TypeID'}
-      /// <summary> Идентификатор типа объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ TypeID'}
+      /// <summary> РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РѕР±СЉРµРєС‚Р° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание TypeID'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TypeID'}
     TypeID: integer;
     //
-    {$REGION ' Описание UniqueName'}
-      /// <summary> Уникальное имя </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ UniqueName'}
+      /// <summary> РЈРЅРёРєР°Р»СЊРЅРѕРµ РёРјСЏ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание UniqueName'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ UniqueName'}
     UniqueName: string;
     //
-    {$REGION ' Описание FDragStartPos'}
-      /// <summary> Точка начала перемещения </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ FDragStartPos'}
+      /// <summary> РўРѕС‡РєР° РЅР°С‡Р°Р»Р° РїРµСЂРµРјРµС‰РµРЅРёСЏ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание FDragStartPos'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ FDragStartPos'}
     FDragStartPos: TFloatPoint;
-    {$REGION ' Описание DrawOffsetX'}
-      /// <summary> Смещение рисования по X </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ DrawOffsetX'}
+      /// <summary> РЎРјРµС‰РµРЅРёРµ СЂРёСЃРѕРІР°РЅРёСЏ РїРѕ X </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание DrawOffsetX'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ DrawOffsetX'}
     DrawOffsetX: integer;
-    {$REGION ' Описание DrawOffsetY'}
-      /// <summary> Смещение рисования по Y </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ DrawOffsetY'}
+      /// <summary> РЎРјРµС‰РµРЅРёРµ СЂРёСЃРѕРІР°РЅРёСЏ РїРѕ Y </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание DrawOffsetY'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ DrawOffsetY'}
     DrawOffsetY: integer;
     //
-    {$REGION ' Описание LogicalUnit'}
-      /// <summary> Ссылка на логический объект схемы </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ LogicalUnit'}
+      /// <summary> РЎСЃС‹Р»РєР° РЅР° Р»РѕРіРёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚ СЃС…РµРјС‹ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание LogicalUnit'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ LogicalUnit'}
     LogicalUnit: TPlantUnit;
     //
     //
-    {$REGION ' Описание VOCBeginDrag'}
-      /// <summary> Команда начала перемещения объекта </summary>
-      ///   <param name="prmHitTest"> параметры области перемещаемого объекта </param>
-      ///   <param name="prmStartPos"> стартовая точка перемещения </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCBeginDrag'}
+      /// <summary> РљРѕРјР°РЅРґР° РЅР°С‡Р°Р»Р° РїРµСЂРµРјРµС‰РµРЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmHitTest"> РїР°СЂР°РјРµС‚СЂС‹ РѕР±Р»Р°СЃС‚Рё РїРµСЂРµРјРµС‰Р°РµРјРѕРіРѕ РѕР±СЉРµРєС‚Р° </param>
+      ///   <param name="prmStartPos"> СЃС‚Р°СЂС‚РѕРІР°СЏ С‚РѕС‡РєР° РїРµСЂРµРјРµС‰РµРЅРёСЏ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCBeginDrag'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCBeginDrag'}
     procedure VOCBeginDrag(prmHitTest: Cardinal; prmStartPos: TFloatPoint); virtual;
-    {$REGION ' Описание VOCEndDrag'}
-      /// <summary> Команда окончания перемещения объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCEndDrag'}
+      /// <summary> РљРѕРјР°РЅРґР° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРµРјРµС‰РµРЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCEndDrag'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCEndDrag'}
     procedure VOCEndDrag(); virtual;
-    {$REGION ' Описание VOCDrag'}
-      /// <summary> Команда перемещения объекта </summary>
-      ///   <param name="prmNewPos"> новая точка перемещения </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCDrag'}
+      /// <summary> РљРѕРјР°РЅРґР° РїРµСЂРµРјРµС‰РµРЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmNewPos"> РЅРѕРІР°СЏ С‚РѕС‡РєР° РїРµСЂРµРјРµС‰РµРЅРёСЏ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCDrag'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCDrag'}
     procedure VOCDrag(prmNewPos: TFloatPoint); virtual;
-    {$REGION ' Описание VOCVertexMove'}
-      /// <summary> команда перемещения вершины объекта </summary>
-      ///   <param name="prmIndex"> индекс вершины </param>
-      ///   <param name="prmNewPos"> новая позиция точки </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCVertexMove'}
+      /// <summary> РєРѕРјР°РЅРґР° РїРµСЂРµРјРµС‰РµРЅРёСЏ РІРµСЂС€РёРЅС‹ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmIndex"> РёРЅРґРµРєСЃ РІРµСЂС€РёРЅС‹ </param>
+      ///   <param name="prmNewPos"> РЅРѕРІР°СЏ РїРѕР·РёС†РёСЏ С‚РѕС‡РєРё </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCVertexMove'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCVertexMove'}
     procedure VOCVertexMove(prmIndex: integer; prmNewPos: TFloatPoint); virtual;
-    {$REGION ' Описание VOCMove'}
-      /// <summary> команда перемещения объекта </summary>
-      ///   <param name="prmDeltaX"> смещение по X </param>
-      ///   <param name="prmDeltaY"> смещение по Y </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCMove'}
+      /// <summary> РєРѕРјР°РЅРґР° РїРµСЂРµРјРµС‰РµРЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmDeltaX"> СЃРјРµС‰РµРЅРёРµ РїРѕ X </param>
+      ///   <param name="prmDeltaY"> СЃРјРµС‰РµРЅРёРµ РїРѕ Y </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCMove'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCMove'}
     procedure VOCMove(prmDeltaX, prmDeltaY: extended); virtual;
-    {$REGION ' Описание VOCHitTest'}
-      /// <summary> возвращает описание области объекта, соотвествующей параметрам </summary>
-      ///   <param name="prmConvertIntf"> объект, реализующий методы преобразования координат </param>
-      ///   <param name="prmParams"> параметры (координаты, чувствительность) </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCHitTest'}
+      /// <summary> РІРѕР·РІСЂР°С‰Р°РµС‚ РѕРїРёСЃР°РЅРёРµ РѕР±Р»Р°СЃС‚Рё РѕР±СЉРµРєС‚Р°, СЃРѕРѕС‚РІРµСЃС‚РІСѓСЋС‰РµР№ РїР°СЂР°РјРµС‚СЂР°Рј </summary>
+      ///   <param name="prmConvertIntf"> РѕР±СЉРµРєС‚, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РјРµС‚РѕРґС‹ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚ </param>
+      ///   <param name="prmParams"> РїР°СЂР°РјРµС‚СЂС‹ (РєРѕРѕСЂРґРёРЅР°С‚С‹, С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ) </param>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCHitTest'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCHitTest'}
     function VOCHitTest(prmConvertIntf: ICoordConvert;
       prmParams: THitTestParams): cardinal; virtual;
-    {$REGION ' Описание VOCGetCursor'}
-      /// <summary> возвращает курсор в зависимости от параметров </summary>
-      ///   <param name="prmHitTest"> параметры (координаты, чувствительность)  </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCGetCursor'}
+      /// <summary> РІРѕР·РІСЂР°С‰Р°РµС‚ РєСѓСЂСЃРѕСЂ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РїР°СЂР°РјРµС‚СЂРѕРІ </summary>
+      ///   <param name="prmHitTest"> РїР°СЂР°РјРµС‚СЂС‹ (РєРѕРѕСЂРґРёРЅР°С‚С‹, С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ)  </param>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCGetCursor'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCGetCursor'}
     function VOCGetCursor(prmHitTest: cardinal): cardinal; virtual;
     //
-    {$REGION ' Описание VOCSideMove'}
-      /// <summary> команда перемещения стороны объекта </summary>
-      ///   <param name="prmIndex"> индекс стороны </param>
-      ///   <param name="prmNewPos"> новая позиция </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCSideMove'}
+      /// <summary> РєРѕРјР°РЅРґР° РїРµСЂРµРјРµС‰РµРЅРёСЏ СЃС‚РѕСЂРѕРЅС‹ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmIndex"> РёРЅРґРµРєСЃ СЃС‚РѕСЂРѕРЅС‹ </param>
+      ///   <param name="prmNewPos"> РЅРѕРІР°СЏ РїРѕР·РёС†РёСЏ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCSideMove'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCSideMove'}
     procedure VOCSideMove(prmIndex: integer; prmNewPos: TFloatPoint); virtual;
-    {$REGION ' Описание VOCConstructPoint'}
-      /// <summary> команда создавния новой точки объекта </summary>
-      ///   <param name="prmPos"> позиция точки </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCConstructPoint'}
+      /// <summary> РєРѕРјР°РЅРґР° СЃРѕР·РґР°РІРЅРёСЏ РЅРѕРІРѕР№ С‚РѕС‡РєРё РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmPos"> РїРѕР·РёС†РёСЏ С‚РѕС‡РєРё </param>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCConstructPoint'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCConstructPoint'}
     function VOCConstructPoint(prmPos: TFloatPoint): cardinal; virtual;
-    {$REGION ' Описание VOCProcessConstruct'}
-      /// <summary> продолжение построения объекта по точкам </summary>
-      ///   <param name="prmPos"> новая позиция точки  </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCProcessConstruct'}
+      /// <summary> РїСЂРѕРґРѕР»Р¶РµРЅРёРµ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РѕР±СЉРµРєС‚Р° РїРѕ С‚РѕС‡РєР°Рј </summary>
+      ///   <param name="prmPos"> РЅРѕРІР°СЏ РїРѕР·РёС†РёСЏ С‚РѕС‡РєРё  </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCProcessConstruct'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCProcessConstruct'}
     procedure VOCProcessConstruct(prmPos: TFloatPoint); virtual;
-    {$REGION ' Описание VOCStopConstruct'}
-      /// <summary> прекращение построения объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCStopConstruct'}
+      /// <summary> РїСЂРµРєСЂР°С‰РµРЅРёРµ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCStopConstruct'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCStopConstruct'}
     function VOCStopConstruct(): cardinal; virtual;
-    {$REGION ' Описание VOCVControl'}
-      /// <summary> управление вершинами объекта </summary>
-      ///   <param name="prmHitTest"> параметры (координаты, чувствительность) </param>
-      ///   <param name="prmPos"> новая позиция </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCVControl'}
+      /// <summary> СѓРїСЂР°РІР»РµРЅРёРµ РІРµСЂС€РёРЅР°РјРё РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmHitTest"> РїР°СЂР°РјРµС‚СЂС‹ (РєРѕРѕСЂРґРёРЅР°С‚С‹, С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ) </param>
+      ///   <param name="prmPos"> РЅРѕРІР°СЏ РїРѕР·РёС†РёСЏ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCVControl'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCVControl'}
     procedure VOCVControl(prmHitTest: Cardinal; prmPos: TFloatPoint); virtual;
     //
-    {$REGION ' Описание GetHitTest'}
-      /// <summary> возвращает описание области объекта, соотвествующей параметрам </summary>
-      ///   <param name="prmCoordConvert"> объект, реализующий методы преобразования координат </param>
-      ///   <param name="prmX"> координата X </param>
-      ///   <param name="prmY"> координата Y </param>
-      ///   <param name="prmTolerance"> чувствительность </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ GetHitTest'}
+      /// <summary> РІРѕР·РІСЂР°С‰Р°РµС‚ РѕРїРёСЃР°РЅРёРµ РѕР±Р»Р°СЃС‚Рё РѕР±СЉРµРєС‚Р°, СЃРѕРѕС‚РІРµСЃС‚РІСѓСЋС‰РµР№ РїР°СЂР°РјРµС‚СЂР°Рј </summary>
+      ///   <param name="prmCoordConvert"> РѕР±СЉРµРєС‚, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РјРµС‚РѕРґС‹ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚ </param>
+      ///   <param name="prmX"> РєРѕРѕСЂРґРёРЅР°С‚Р° X </param>
+      ///   <param name="prmY"> РєРѕРѕСЂРґРёРЅР°С‚Р° Y </param>
+      ///   <param name="prmTolerance"> С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ </param>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание GetHitTest'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ GetHitTest'}
     function GetHitTest(prmCoordConvert: ICoordConvert;
       prmX, prmY: integer; prmTolerance: integer = 3): cardinal;
     //
-    {$REGION ' Описание IsInRect'}
-      /// <summary> проверка, находится ли объект внутри прямоугольной области,
-      ///   заданной точками </summary>
-      ///   <param name="x1"> координата X1 </param>
-      ///   <param name="y1"> координата Y1 </param>
-      ///   <param name="x2"> координата X2 </param>
-      ///   <param name="y2"> координата Y2 </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ IsInRect'}
+      /// <summary> РїСЂРѕРІРµСЂРєР°, РЅР°С…РѕРґРёС‚СЃСЏ Р»Рё РѕР±СЉРµРєС‚ РІРЅСѓС‚СЂРё РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРѕР№ РѕР±Р»Р°СЃС‚Рё,
+      ///   Р·Р°РґР°РЅРЅРѕР№ С‚РѕС‡РєР°РјРё </summary>
+      ///   <param name="x1"> РєРѕРѕСЂРґРёРЅР°С‚Р° X1 </param>
+      ///   <param name="y1"> РєРѕРѕСЂРґРёРЅР°С‚Р° Y1 </param>
+      ///   <param name="x2"> РєРѕРѕСЂРґРёРЅР°С‚Р° X2 </param>
+      ///   <param name="y2"> РєРѕРѕСЂРґРёРЅР°С‚Р° Y2 </param>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание IsInRect'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ IsInRect'}
     function IsInRect(x1, y1, x2, y2: integer): boolean;
     //
-    {$REGION ' Описание Create'}
-      /// <summary> Конструктор экземпляра класса </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Create'}
+      /// <summary> РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Create'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Create'}
     constructor Create; virtual;
-    {$REGION ' Описание Destroy'}
-      /// <summary> Деструктор экземпляра класса </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Destroy'}
+      /// <summary> Р”РµСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Destroy'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Destroy'}
     destructor Destroy; override;
-    {$REGION ' Описание BeginUpdate'}
-      /// <summary> Блокировка перерисовки объекта </summary>
-      ///   <param name="Sender"> источник события - для отладки </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ BeginUpdate'}
+      /// <summary> Р‘Р»РѕРєРёСЂРѕРІРєР° РїРµСЂРµСЂРёСЃРѕРІРєРё РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="Sender"> РёСЃС‚РѕС‡РЅРёРє СЃРѕР±С‹С‚РёСЏ - РґР»СЏ РѕС‚Р»Р°РґРєРё </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание BeginUpdate'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ BeginUpdate'}
     procedure BeginUpdate(Sender: integer = 0);
-    {$REGION ' Описание EndUpdate'}
-      /// <summary> Разблокировка перерисовки объекта </summary>
-      ///   <param name="Sender"> источник события - для отладки </param>      ///
+    {$REGION ' РћРїРёСЃР°РЅРёРµ EndUpdate'}
+      /// <summary> Р Р°Р·Р±Р»РѕРєРёСЂРѕРІРєР° РїРµСЂРµСЂРёСЃРѕРІРєРё РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="Sender"> РёСЃС‚РѕС‡РЅРёРє СЃРѕР±С‹С‚РёСЏ - РґР»СЏ РѕС‚Р»Р°РґРєРё </param>      ///
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание EndUpdate'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ EndUpdate'}
     procedure EndUpdate(Sender: integer = 0);
-    // Рисование
-    {$REGION ' Описание Draw'}
-      /// <summary> Рисование объекта </summary>
-      ///   <param name="Canvas"> Логический холст </param>
+    // Р РёСЃРѕРІР°РЅРёРµ
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Draw'}
+      /// <summary> Р РёСЃРѕРІР°РЅРёРµ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="Canvas"> Р›РѕРіРёС‡РµСЃРєРёР№ С…РѕР»СЃС‚ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Draw'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Draw'}
     procedure Draw(Canvas: TLogicalCanvas); virtual;
-    {$REGION ' Описание DrawInComplex'}
-      /// <summary> Рисование объекта в составе сложного </summary>
-      ///   <param name="Params"> параметры рисования </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ DrawInComplex'}
+      /// <summary> Р РёСЃРѕРІР°РЅРёРµ РѕР±СЉРµРєС‚Р° РІ СЃРѕСЃС‚Р°РІРµ СЃР»РѕР¶РЅРѕРіРѕ </summary>
+      ///   <param name="Params"> РїР°СЂР°РјРµС‚СЂС‹ СЂРёСЃРѕРІР°РЅРёСЏ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание DrawInComplex'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ DrawInComplex'}
     procedure DrawInComplex(Params: TComplexDrawParams); virtual;
     //
-    {$REGION ' Описание CanBe1stConnObject'}
-      /// <summary> проверка, может ли объект быть 1м в соединении объектов </summary>
-      ///   <param name="prmCL"> содинительная линия </param>
-      ///   <param name="prmHT"> параметры курсора </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ CanBe1stConnObject'}
+      /// <summary> РїСЂРѕРІРµСЂРєР°, РјРѕР¶РµС‚ Р»Рё РѕР±СЉРµРєС‚ Р±С‹С‚СЊ 1Рј РІ СЃРѕРµРґРёРЅРµРЅРёРё РѕР±СЉРµРєС‚РѕРІ </summary>
+      ///   <param name="prmCL"> СЃРѕРґРёРЅРёС‚РµР»СЊРЅР°СЏ Р»РёРЅРёСЏ </param>
+      ///   <param name="prmHT"> РїР°СЂР°РјРµС‚СЂС‹ РєСѓСЂСЃРѕСЂР° </param>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание CanBe1stConnObject'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CanBe1stConnObject'}
     function CanBe1stConnObject(prmCL: TConnectionLine;
       prmHT: cardinal): boolean; virtual;
-    {$REGION ' Описание CanBe2ndConnObject'}
-      /// <summary> проверка, может ли объект быть 2м в соединении объектов </summary>
-      ///   <param name="prmCL"> соединительная линия </param>
-      ///   <param name="prmHT"> параметры курсора </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ CanBe2ndConnObject'}
+      /// <summary> РїСЂРѕРІРµСЂРєР°, РјРѕР¶РµС‚ Р»Рё РѕР±СЉРµРєС‚ Р±С‹С‚СЊ 2Рј РІ СЃРѕРµРґРёРЅРµРЅРёРё РѕР±СЉРµРєС‚РѕРІ </summary>
+      ///   <param name="prmCL"> СЃРѕРµРґРёРЅРёС‚РµР»СЊРЅР°СЏ Р»РёРЅРёСЏ </param>
+      ///   <param name="prmHT"> РїР°СЂР°РјРµС‚СЂС‹ РєСѓСЂСЃРѕСЂР° </param>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание CanBe2ndConnObject'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CanBe2ndConnObject'}
     function CanBe2ndConnObject(prmCL: TConnectionLine;
       prmHT: cardinal): boolean; virtual;
     //
-    {$REGION ' Описание AddConnection'}
-      /// <summary> Добавление соединения </summary>
-      ///   <param name="CL"> добавляемое соединение </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ AddConnection'}
+      /// <summary> Р”РѕР±Р°РІР»РµРЅРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ </summary>
+      ///   <param name="CL"> РґРѕР±Р°РІР»СЏРµРјРѕРµ СЃРѕРµРґРёРЅРµРЅРёРµ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание AddConnection'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ AddConnection'}
     procedure AddConnection(CL: TConnectionLine); virtual;
-    {$REGION ' Описание DeleteConnection'}
-      /// <summary> Удаление соединеия из объекта </summary>
-      ///   <param name="CL"> удаляема соединительная линия </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ DeleteConnection'}
+      /// <summary> РЈРґР°Р»РµРЅРёРµ СЃРѕРµРґРёРЅРµРёСЏ РёР· РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="CL"> СѓРґР°Р»СЏРµРјР° СЃРѕРµРґРёРЅРёС‚РµР»СЊРЅР°СЏ Р»РёРЅРёСЏ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание DeleteConnection'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ DeleteConnection'}
     procedure DeleteConnection(CL: TConnectionLine); virtual;
-    {$REGION ' Описание Delete'}
-      /// <summary> Действия, предшествующие удалению объека </summary>
-      ///   <param name="prmMovingCL"> список соединительных линий, состояние которых изменится или может изменится </param>
-      ///   <param name="prmObjects"> список объектов, , состояние которых изменится или может изменится </param>
-      ///   <param name="prmObjectsToFree"> список объектов, которые должны быть удалены </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Delete'}
+      /// <summary> Р”РµР№СЃС‚РІРёСЏ, РїСЂРµРґС€РµСЃС‚РІСѓСЋС‰РёРµ СѓРґР°Р»РµРЅРёСЋ РѕР±СЉРµРєР° </summary>
+      ///   <param name="prmMovingCL"> СЃРїРёСЃРѕРє СЃРѕРµРґРёРЅРёС‚РµР»СЊРЅС‹С… Р»РёРЅРёР№, СЃРѕСЃС‚РѕСЏРЅРёРµ РєРѕС‚РѕСЂС‹С… РёР·РјРµРЅРёС‚СЃСЏ РёР»Рё РјРѕР¶РµС‚ РёР·РјРµРЅРёС‚СЃСЏ </param>
+      ///   <param name="prmObjects"> СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ, , СЃРѕСЃС‚РѕСЏРЅРёРµ РєРѕС‚РѕСЂС‹С… РёР·РјРµРЅРёС‚СЃСЏ РёР»Рё РјРѕР¶РµС‚ РёР·РјРµРЅРёС‚СЃСЏ </param>
+      ///   <param name="prmObjectsToFree"> СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ СѓРґР°Р»РµРЅС‹ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Delete'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Delete'}
     procedure Delete(var prmMovingCL: TList; var prmObjects: TList;
       var prmObjectsToFree: TList); virtual;
     //
-    {$REGION ' Описание MakeBasePointsFromJson'}
-      /// <summary> построение базовых точек по json-описанию </summary>
-      ///   <param name="prmJsonObj"> json-описание </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MakeBasePointsFromJson'}
+      /// <summary> РїРѕСЃС‚СЂРѕРµРЅРёРµ Р±Р°Р·РѕРІС‹С… С‚РѕС‡РµРє РїРѕ json-РѕРїРёСЃР°РЅРёСЋ </summary>
+      ///   <param name="prmJsonObj"> json-РѕРїРёСЃР°РЅРёРµ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MakeBasePointsFromJson'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MakeBasePointsFromJson'}
     procedure MakeBasePointsFromJson(prmJsonObj: ISuperObject); virtual;
-    {$REGION ' Описание MakeBrushPenFontFromJson'}
-      /// <summary> задает параметры кисти/пера/шрифта по json-описанию </summary>
-      ///   <param name="prmJsonObj"> json-описание </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MakeBrushPenFontFromJson'}
+      /// <summary> Р·Р°РґР°РµС‚ РїР°СЂР°РјРµС‚СЂС‹ РєРёСЃС‚Рё/РїРµСЂР°/С€СЂРёС„С‚Р° РїРѕ json-РѕРїРёСЃР°РЅРёСЋ </summary>
+      ///   <param name="prmJsonObj"> json-РѕРїРёСЃР°РЅРёРµ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MakeBrushPenFontFromJson'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MakeBrushPenFontFromJson'}
     procedure MakeBrushPenFontFromJson(prmJsonObj: ISuperObject); virtual;
     //
-    {$REGION ' Описание MakeObjectFromJson'}
-      /// <summary> создавние объекта по json-описанию </summary>
-      ///   <param name="prmJsonObj"> json-объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MakeObjectFromJson'}
+      /// <summary> СЃРѕР·РґР°РІРЅРёРµ РѕР±СЉРµРєС‚Р° РїРѕ json-РѕРїРёСЃР°РЅРёСЋ </summary>
+      ///   <param name="prmJsonObj"> json-РѕР±СЉРµРєС‚ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MakeObjectFromJson'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MakeObjectFromJson'}
     procedure MakeObjectFromJson(prmJsonObj: ISuperObject); overload; virtual;
-    {$REGION ' Описание MakeObjectFromJson'}
-      /// <summary> создавние объекта по json-описанию </summary>
-      ///   <param name="prmJsonText"> json-текст </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MakeObjectFromJson'}
+      /// <summary> СЃРѕР·РґР°РІРЅРёРµ РѕР±СЉРµРєС‚Р° РїРѕ json-РѕРїРёСЃР°РЅРёСЋ </summary>
+      ///   <param name="prmJsonText"> json-С‚РµРєСЃС‚ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MakeObjectFromJson'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MakeObjectFromJson'}
     procedure MakeObjectFromJson(prmJsonText: string); overload;
     //
-    {$REGION ' Описание MoveWhileDrag'}
-      /// <summary> действия при перемещении мыши при перемещении объекта </summary>
-      ///   <param name="prmMovingLines"> соединительные линии, состояние которых изменяется или может изменится </param>
-      ///   <param name="prmSchema"> схема, которой принадлежит объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MoveWhileDrag'}
+      /// <summary> РґРµР№СЃС‚РІРёСЏ РїСЂРё РїРµСЂРµРјРµС‰РµРЅРёРё РјС‹С€Рё РїСЂРё РїРµСЂРµРјРµС‰РµРЅРёРё РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmMovingLines"> СЃРѕРµРґРёРЅРёС‚РµР»СЊРЅС‹Рµ Р»РёРЅРёРё, СЃРѕСЃС‚РѕСЏРЅРёРµ РєРѕС‚РѕСЂС‹С… РёР·РјРµРЅСЏРµС‚СЃСЏ РёР»Рё РјРѕР¶РµС‚ РёР·РјРµРЅРёС‚СЃСЏ </param>
+      ///   <param name="prmSchema"> СЃС…РµРјР°, РєРѕС‚РѕСЂРѕР№ РїСЂРёРЅР°РґР»РµР¶РёС‚ РѕР±СЉРµРєС‚ </param>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MoveWhileDrag'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MoveWhileDrag'}
     function MoveWhileDrag(var prmMovingLines: TList; prmSchema: TObject): boolean; virtual;
-    {$REGION ' Описание MoveWhileConstruct'}
-      /// <summary> действия при перемещении мыши при конструировании объекта </summary>
-      ///   <param name="prmSchema"> схема, которой принадлежит объект </param>
-      ///   <param name="X"> координата мыши X </param>
-      ///   <param name="Y"> координата мыши Y </param>
-      ///   <param name="flShift"> нажата ли клавиша Shift </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MoveWhileConstruct'}
+      /// <summary> РґРµР№СЃС‚РІРёСЏ РїСЂРё РїРµСЂРµРјРµС‰РµРЅРёРё РјС‹С€Рё РїСЂРё РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёРё РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmSchema"> СЃС…РµРјР°, РєРѕС‚РѕСЂРѕР№ РїСЂРёРЅР°РґР»РµР¶РёС‚ РѕР±СЉРµРєС‚ </param>
+      ///   <param name="X"> РєРѕРѕСЂРґРёРЅР°С‚Р° РјС‹С€Рё X </param>
+      ///   <param name="Y"> РєРѕРѕСЂРґРёРЅР°С‚Р° РјС‹С€Рё Y </param>
+      ///   <param name="flShift"> РЅР°Р¶Р°С‚Р° Р»Рё РєР»Р°РІРёС€Р° Shift </param>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MoveWhileConstruct'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MoveWhileConstruct'}
     function MoveWhileConstruct(prmSchema: TObject;
       X, Y: integer; flShift: boolean): boolean; virtual;
     //
-    {$REGION ' Описание ArrangeConnections'}
-      /// <summary> актуализация состояния соединений с объектом </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ ArrangeConnections'}
+      /// <summary> Р°РєС‚СѓР°Р»РёР·Р°С†РёСЏ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃРѕРµРґРёРЅРµРЅРёР№ СЃ РѕР±СЉРµРєС‚РѕРј </summary>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание ArrangeConnections'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ ArrangeConnections'}
     function ArrangeConnections(): boolean; virtual;
     //
-    {$REGION ' Описание FinishConstruct'}
-      /// <summary> действия при завершении построения объекта </summary>
-      ///   <param name="prmPU"> созданный логический объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ FinishConstruct'}
+      /// <summary> РґРµР№СЃС‚РІРёСЏ РїСЂРё Р·Р°РІРµСЂС€РµРЅРёРё РїРѕСЃС‚СЂРѕРµРЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmPU"> СЃРѕР·РґР°РЅРЅС‹Р№ Р»РѕРіРёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚ </param>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание FinishConstruct'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ FinishConstruct'}
     function FinishConstruct(var prmPU: TPlantUnit): boolean; virtual;
-    {$REGION ' Описание FinishDrag'}
-      /// <summary> действия при завершении перетаскивания объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ FinishDrag'}
+      /// <summary> РґРµР№СЃС‚РІРёСЏ РїСЂРё Р·Р°РІРµСЂС€РµРЅРёРё РїРµСЂРµС‚Р°СЃРєРёРІР°РЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание FinishDrag'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ FinishDrag'}
     function FinishDrag(): boolean; virtual;
     //
-    {$REGION ' Описание MakeLogicalUnit'}
-      /// <summary> создание логического объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MakeLogicalUnit'}
+      /// <summary> СЃРѕР·РґР°РЅРёРµ Р»РѕРіРёС‡РµСЃРєРѕРіРѕ РѕР±СЉРµРєС‚Р° </summary>
       /// <returns> TPlantUnit </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MakeLogicalUnit'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MakeLogicalUnit'}
     function MakeLogicalUnit(): TPlantUnit; virtual;
     //
-    {$REGION ' Описание GetObjectJson'}
-      /// <summary> возвращает json-описание графического объекта </summary>
-      ///   <param name="OffsetX"> смещение координат по X </param>
-      ///   <param name="OffsetY"> смещение координат по Y </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ GetObjectJson'}
+      /// <summary> РІРѕР·РІСЂР°С‰Р°РµС‚ json-РѕРїРёСЃР°РЅРёРµ РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="OffsetX"> СЃРјРµС‰РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РїРѕ X </param>
+      ///   <param name="OffsetY"> СЃРјРµС‰РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РїРѕ Y </param>
       /// <returns> string </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание GetObjectJson'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ GetObjectJson'}
     function GetObjectJson(OffsetX, OffsetY: integer): string; virtual;
-    {$REGION ' Описание GetObjectFullJson'}
-      /// <summary> возвращет полное json-описание объекта - графического и илогического объекта </summary>
-      ///   <param name="OffsetX"> смещение координат по X </param>
-      ///   <param name="OffsetY"> смещение координат по Y </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ GetObjectFullJson'}
+      /// <summary> РІРѕР·РІСЂР°С‰РµС‚ РїРѕР»РЅРѕРµ json-РѕРїРёСЃР°РЅРёРµ РѕР±СЉРµРєС‚Р° - РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ Рё РёР»РѕРіРёС‡РµСЃРєРѕРіРѕ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="OffsetX"> СЃРјРµС‰РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РїРѕ X </param>
+      ///   <param name="OffsetY"> СЃРјРµС‰РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РїРѕ Y </param>
       /// <returns> string </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание GetObjectFullJson'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ GetObjectFullJson'}
     function GetObjectFullJson(OffsetX, OffsetY: integer): string; virtual;
     //
-    {$REGION ' Описание CheckErrors'}
-      /// <summary> проверка объекта на наличие ошибок согласованности </summary>
-      ///   <param name="prmErrorsList"> список ошибок </param>
-      ///   <param name="prmErrorObjects"> список объектов с ошибками </param>
-      ///   <param name="prmSchema"> схема, которой принадлежит объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ CheckErrors'}
+      /// <summary> РїСЂРѕРІРµСЂРєР° РѕР±СЉРµРєС‚Р° РЅР° РЅР°Р»РёС‡РёРµ РѕС€РёР±РѕРє СЃРѕРіР»Р°СЃРѕРІР°РЅРЅРѕСЃС‚Рё </summary>
+      ///   <param name="prmErrorsList"> СЃРїРёСЃРѕРє РѕС€РёР±РѕРє </param>
+      ///   <param name="prmErrorObjects"> СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ СЃ РѕС€РёР±РєР°РјРё </param>
+      ///   <param name="prmSchema"> СЃС…РµРјР°, РєРѕС‚РѕСЂРѕР№ РїСЂРёРЅР°РґР»РµР¶РёС‚ РѕР±СЉРµРєС‚ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание CheckErrors'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CheckErrors'}
     procedure CheckErrors(var prmErrorsList: TStringList;
       var prmErrorObjects: TList; prmSchema: TObject); virtual;
     //
-    {$REGION ' Описание GetText'}
-      /// <summary> Возвращает текст всех текстовых полей элемента </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ GetText'}
+      /// <summary> Р’РѕР·РІСЂР°С‰Р°РµС‚ С‚РµРєСЃС‚ РІСЃРµС… С‚РµРєСЃС‚РѕРІС‹С… РїРѕР»РµР№ СЌР»РµРјРµРЅС‚Р° </summary>
       /// <returns> string </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание GetText'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ GetText'}
     function GetText(): string; virtual;
-    {$REGION ' Описание IsTextExists'}
-      /// <summary> Содержит ли объект указанный текст </summary>
-      ///   <param name="prmText"> искомый текст </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ IsTextExists'}
+      /// <summary> РЎРѕРґРµСЂР¶РёС‚ Р»Рё РѕР±СЉРµРєС‚ СѓРєР°Р·Р°РЅРЅС‹Р№ С‚РµРєСЃС‚ </summary>
+      ///   <param name="prmText"> РёСЃРєРѕРјС‹Р№ С‚РµРєСЃС‚ </param>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание IsTextExists'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ IsTextExists'}
     function IsTextExists(prmText: string): boolean;
     //
-    {$REGION ' Описание GetCentralPoint'}
-      /// <summary> Возвращает "центральную" точку объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ GetCentralPoint'}
+      /// <summary> Р’РѕР·РІСЂР°С‰Р°РµС‚ "С†РµРЅС‚СЂР°Р»СЊРЅСѓСЋ" С‚РѕС‡РєСѓ РѕР±СЉРµРєС‚Р° </summary>
       /// <returns> TFloatPoint </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание GetCentralPoint'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ GetCentralPoint'}
     function GetCentralPoint(): TFloatPoint;
     //
-    {$REGION ' Описание IsTheSame'}
-      /// <summary> Проверка объекта на то, что он "тот же самый" </summary>
-      ///   <param name="prmObject"> проверяемый объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ IsTheSame'}
+      /// <summary> РџСЂРѕРІРµСЂРєР° РѕР±СЉРµРєС‚Р° РЅР° С‚Рѕ, С‡С‚Рѕ РѕРЅ "С‚РѕС‚ Р¶Рµ СЃР°РјС‹Р№" </summary>
+      ///   <param name="prmObject"> РїСЂРѕРІРµСЂСЏРµРјС‹Р№ РѕР±СЉРµРєС‚ </param>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание IsTheSame'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ IsTheSame'}
     function IsTheSame(prmObject: TBaseVisualObject): boolean;
-    // Свойства/события
-    {$REGION ' Описание BasePointsCount'}
-      /// <summary> Количество базовых точек </summary>
+    // РЎРІРѕР№СЃС‚РІР°/СЃРѕР±С‹С‚РёСЏ
+    {$REGION ' РћРїРёСЃР°РЅРёРµ BasePointsCount'}
+      /// <summary> РљРѕР»РёС‡РµСЃС‚РІРѕ Р±Р°Р·РѕРІС‹С… С‚РѕС‡РµРє </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание BasePointsCount'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ BasePointsCount'}
     property BasePointsCount: Integer read GetBasePointsCount;
-    {$REGION ' Описание BasePoints'}
-      /// <summary> Список базовых точек </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ BasePoints'}
+      /// <summary> РЎРїРёСЃРѕРє Р±Р°Р·РѕРІС‹С… С‚РѕС‡РµРє </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание BasePoints'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ BasePoints'}
     property BasePoints[Index: Integer]: TFloatPoint read GetBasePoint write SetBasePoint;
     //
-    {$REGION ' Описание VertexesCount'}
-      /// <summary> Количество вершин </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VertexesCount'}
+      /// <summary> РљРѕР»РёС‡РµСЃС‚РІРѕ РІРµСЂС€РёРЅ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VertexesCount'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VertexesCount'}
     property VertexesCount: Integer read GetVertexesCount;
-    {$REGION ' Описание Vertex'}
-      /// <summary> Список вершин </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Vertex'}
+      /// <summary> РЎРїРёСЃРѕРє РІРµСЂС€РёРЅ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Vertex'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Vertex'}
     property Vertex[Index: Integer]: TFloatPoint read GetVertex write SetVertex;
-    {$REGION ' Описание OnChange'}
-      /// <summary> Событие на изменение </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ OnChange'}
+      /// <summary> РЎРѕР±С‹С‚РёРµ РЅР° РёР·РјРµРЅРµРЅРёРµ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание OnChange'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ OnChange'}
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
     //
-    {$REGION ' Описание Brush'}
-      /// <summary> Кисть рисования </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Brush'}
+      /// <summary> РљРёСЃС‚СЊ СЂРёСЃРѕРІР°РЅРёСЏ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Brush'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Brush'}
     property Brush: TBrush read FBrush write FBrush;
-    {$REGION ' Описание Pen'}
-      /// <summary> Перо рисования </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Pen'}
+      /// <summary> РџРµСЂРѕ СЂРёСЃРѕРІР°РЅРёСЏ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Pen'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Pen'}
     property Pen: TPen read FPen write FPen;
-    {$REGION ' Описание Font'}
-      /// <summary> Шрифт рисования </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Font'}
+      /// <summary> РЁСЂРёС„С‚ СЂРёСЃРѕРІР°РЅРёСЏ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Font'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Font'}
     property Font: TFont read FFont write FFont;
     //
-    {$REGION ' Описание IsSelected'}
-      /// <summary> Выделен ли объект </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ IsSelected'}
+      /// <summary> Р’С‹РґРµР»РµРЅ Р»Рё РѕР±СЉРµРєС‚ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание IsSelected'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ IsSelected'}
     property IsSelected: boolean read FIsSelected write FIsSelected;
     //
-    {$REGION ' Описание CanBeAligned'}
-      /// <summary> объект может быть выровнен относительно других объектов </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ CanBeAligned'}
+      /// <summary> РѕР±СЉРµРєС‚ РјРѕР¶РµС‚ Р±С‹С‚СЊ РІС‹СЂРѕРІРЅРµРЅ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РґСЂСѓРіРёС… РѕР±СЉРµРєС‚РѕРІ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание CanBeAligned'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CanBeAligned'}
     property CanBeAligned: boolean read FCanBeAligned;
-    {$REGION ' Описание SelectionColor'}
-      /// <summary> цвет выделения объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ SelectionColor'}
+      /// <summary> С†РІРµС‚ РІС‹РґРµР»РµРЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание SelectionColor'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ SelectionColor'}
     property SelectionColor: TColor read FSelectionColor;
-    {$REGION ' Описание Connectable'}
-      /// <summary> объект может быть соединен с другими объектами </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Connectable'}
+      /// <summary> РѕР±СЉРµРєС‚ РјРѕР¶РµС‚ Р±С‹С‚СЊ СЃРѕРµРґРёРЅРµРЅ СЃ РґСЂСѓРіРёРјРё РѕР±СЉРµРєС‚Р°РјРё </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Connectable'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Connectable'}
     property Connectable: boolean read FConnectable;
-    {$REGION ' Описание Selectable'}
-      /// <summary> объект может быть выбран </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Selectable'}
+      /// <summary> РѕР±СЉРµРєС‚ РјРѕР¶РµС‚ Р±С‹С‚СЊ РІС‹Р±СЂР°РЅ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Selectable'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Selectable'}
     property Selectable: boolean read FSelectable;
-    {$REGION ' Описание LogicalUnitRequired'}
-      /// <summary> у объекта должен обязательно быть логический объект </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ LogicalUnitRequired'}
+      /// <summary> Сѓ РѕР±СЉРµРєС‚Р° РґРѕР»Р¶РµРЅ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ Р±С‹С‚СЊ Р»РѕРіРёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание LogicalUnitRequired'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ LogicalUnitRequired'}
     property LogicalUnitRequired: boolean read FLogicalUnitRequired;
     //
-    {$REGION ' Описание Rotation'}
-      /// <summary> угол поворота объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Rotation'}
+      /// <summary> СѓРіРѕР» РїРѕРІРѕСЂРѕС‚Р° РѕР±СЉРµРєС‚Р° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Rotation'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Rotation'}
     property Rotation: integer read FRotation write SetRotation;
-    {$REGION ' Описание Rotated'}
-      /// <summary> повернут ли объект </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Rotated'}
+      /// <summary> РїРѕРІРµСЂРЅСѓС‚ Р»Рё РѕР±СЉРµРєС‚ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Rotated'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Rotated'}
     property Rotated: boolean read IsRotated;
     //
-    {$REGION ' Описание VisualContainer'}
-      /// <summary> контейнер, в котором находится объект </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VisualContainer'}
+      /// <summary> РєРѕРЅС‚РµР№РЅРµСЂ, РІ РєРѕС‚РѕСЂРѕРј РЅР°С…РѕРґРёС‚СЃСЏ РѕР±СЉРµРєС‚ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VisualContainer'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VisualContainer'}
     property VisualContainer: TObject read FVisualContainer write SetVisualContainer;
   end;
 
-  {$REGION ' Описание TVisualObjectClass'}
-    /// <summary> Метакласс визуальных объектов </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TVisualObjectClass'}
+    /// <summary> РњРµС‚Р°РєР»Р°СЃСЃ РІРёР·СѓР°Р»СЊРЅС‹С… РѕР±СЉРµРєС‚РѕРІ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TVisualObjectClass'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TVisualObjectClass'}
   TVisualObjectClass = class of TBaseVisualObject;
 
-  {$REGION ' Описание TRectVisualObject'}
-    /// <summary> Базовый класс для "прямоугольных" объектов </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TRectVisualObject'}
+    /// <summary> Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ "РїСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹С…" РѕР±СЉРµРєС‚РѕРІ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TRectVisualObject'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TRectVisualObject'}
   TRectVisualObject = class(TBaseVisualObject)
   private
     FConstructing: Boolean;
@@ -654,72 +654,72 @@ type
     function GetVertex(Index: Integer): TFloatPoint; override;
     procedure SetVertex(Index: Integer; const Value: TFloatPoint); override;
   public
-    {$REGION ' Описание VOCSideMove'}
-      /// <summary> команда перемещения стороны объекта </summary>
-      ///   <param name="prmIndex"> индекс стороны </param>
-      ///   <param name="prmNewPos"> новая позиция </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCSideMove'}
+      /// <summary> РєРѕРјР°РЅРґР° РїРµСЂРµРјРµС‰РµРЅРёСЏ СЃС‚РѕСЂРѕРЅС‹ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmIndex"> РёРЅРґРµРєСЃ СЃС‚РѕСЂРѕРЅС‹ </param>
+      ///   <param name="prmNewPos"> РЅРѕРІР°СЏ РїРѕР·РёС†РёСЏ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCSideMove'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCSideMove'}
     procedure VOCSideMove(prmIndex: integer; prmNewPos: TFloatPoint); override;
-    {$REGION ' Описание VOCHitTest'}
-      /// <summary> возвращает описание области объекта, соотвествующей параметрам </summary>
-      ///   <param name="prmConvertIntf"> объект, реализующий методы преобразования координат </param>
-      ///   <param name="prmParams"> параметры (координаты, чувствительность) </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCHitTest'}
+      /// <summary> РІРѕР·РІСЂР°С‰Р°РµС‚ РѕРїРёСЃР°РЅРёРµ РѕР±Р»Р°СЃС‚Рё РѕР±СЉРµРєС‚Р°, СЃРѕРѕС‚РІРµСЃС‚РІСѓСЋС‰РµР№ РїР°СЂР°РјРµС‚СЂР°Рј </summary>
+      ///   <param name="prmConvertIntf"> РѕР±СЉРµРєС‚, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РјРµС‚РѕРґС‹ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚ </param>
+      ///   <param name="prmParams"> РїР°СЂР°РјРµС‚СЂС‹ (РєРѕРѕСЂРґРёРЅР°С‚С‹, С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ) </param>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCHitTest'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCHitTest'}
     function VOCHitTest(prmConvertIntf: ICoordConvert;
       prmParams: THitTestParams): cardinal; override;
-    {$REGION ' Описание VOCGetCursor'}
-      /// <summary> возвращает курсор в зависимости от параметров </summary>
-      ///   <param name="prmHitTest"> параметры (координаты, чувствительность)  </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCGetCursor'}
+      /// <summary> РІРѕР·РІСЂР°С‰Р°РµС‚ РєСѓСЂСЃРѕСЂ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РїР°СЂР°РјРµС‚СЂРѕРІ </summary>
+      ///   <param name="prmHitTest"> РїР°СЂР°РјРµС‚СЂС‹ (РєРѕРѕСЂРґРёРЅР°С‚С‹, С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ)  </param>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCGetCursor'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCGetCursor'}
     function VOCGetCursor(prmHitTest: cardinal): cardinal; override;
-    {$REGION ' Описание VOCConstructPoint'}
-      /// <summary> команда создавния новой точки объекта </summary>
-      ///   <param name="prmPos"> позиция точки </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCConstructPoint'}
+      /// <summary> РєРѕРјР°РЅРґР° СЃРѕР·РґР°РІРЅРёСЏ РЅРѕРІРѕР№ С‚РѕС‡РєРё РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmPos"> РїРѕР·РёС†РёСЏ С‚РѕС‡РєРё </param>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCConstructPoint'}    
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCConstructPoint'}    
     function VOCConstructPoint(prmPos: TFloatPoint): cardinal; override;
-    {$REGION ' Описание VOCProcessConstruct'}
-      /// <summary> продолжение построения объекта по точкам </summary>
-      ///   <param name="prmPos"> новая позиция точки  </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCProcessConstruct'}
+      /// <summary> РїСЂРѕРґРѕР»Р¶РµРЅРёРµ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РѕР±СЉРµРєС‚Р° РїРѕ С‚РѕС‡РєР°Рј </summary>
+      ///   <param name="prmPos"> РЅРѕРІР°СЏ РїРѕР·РёС†РёСЏ С‚РѕС‡РєРё  </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCProcessConstruct'}    
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCProcessConstruct'}    
     procedure VOCProcessConstruct(prmPos: TFloatPoint); override;
-    {$REGION ' Описание VOCStopConstruct'}
-      /// <summary> прекращение построения объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCStopConstruct'}
+      /// <summary> РїСЂРµРєСЂР°С‰РµРЅРёРµ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCStopConstruct'}    
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCStopConstruct'}    
     function VOCStopConstruct(): cardinal; override;
     //
-    {$REGION ' Описание GetText'}
-      /// <summary> Возвращает текст всех текстовых полей элемента </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ GetText'}
+      /// <summary> Р’РѕР·РІСЂР°С‰Р°РµС‚ С‚РµРєСЃС‚ РІСЃРµС… С‚РµРєСЃС‚РѕРІС‹С… РїРѕР»РµР№ СЌР»РµРјРµРЅС‚Р° </summary>
       /// <returns> string </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание GetText'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ GetText'}
     function GetText(): string; override;
     //
-    {$REGION ' Описание Create'}
-      /// <summary> Конструктор экземпляра класса </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Create'}
+      /// <summary> РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Create'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Create'}
     constructor Create; override;
-    {$REGION ' Описание Text'}
-      /// <summary> Текст элемента </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Text'}
+      /// <summary> РўРµРєСЃС‚ СЌР»РµРјРµРЅС‚Р° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Text'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Text'}
     property Text: String read FText write SetText;
   end;
 
-  {$REGION ' Описание TLineVisualObject'}
-    /// <summary> Базовый класс для объектов-линий </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TLineVisualObject'}
+    /// <summary> Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕР±СЉРµРєС‚РѕРІ-Р»РёРЅРёР№ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TLineVisualObject'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TLineVisualObject'}
   TLineVisualObject = class(TBaseVisualObject)
   private
     FConstructing: Boolean;
@@ -731,120 +731,120 @@ type
     function GetVertexesCount: Integer; override;
     function GetVertex(Index: Integer): TFloatPoint; override;
     procedure SetVertex(Index: Integer; const Value: TFloatPoint); override;
-    // Определения момента завершения конструирования
+    // РћРїСЂРµРґРµР»РµРЅРёСЏ РјРѕРјРµРЅС‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёСЏ
     function NeedToStopConstruct(Count: Integer): Longint; virtual; abstract;
     //
     procedure SpecialDraw(Canvas: TLogicalCanvas); override;
   public
-    {$REGION ' Описание VOCHitTest'}
-      /// <summary> возвращает описание области объекта, соотвествующей параметрам </summary>
-      ///   <param name="prmConvertIntf"> объект, реализующий методы преобразования координат </param>
-      ///   <param name="prmParams"> параметры (координаты, чувствительность) </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCHitTest'}
+      /// <summary> РІРѕР·РІСЂР°С‰Р°РµС‚ РѕРїРёСЃР°РЅРёРµ РѕР±Р»Р°СЃС‚Рё РѕР±СЉРµРєС‚Р°, СЃРѕРѕС‚РІРµСЃС‚РІСѓСЋС‰РµР№ РїР°СЂР°РјРµС‚СЂР°Рј </summary>
+      ///   <param name="prmConvertIntf"> РѕР±СЉРµРєС‚, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РјРµС‚РѕРґС‹ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚ </param>
+      ///   <param name="prmParams"> РїР°СЂР°РјРµС‚СЂС‹ (РєРѕРѕСЂРґРёРЅР°С‚С‹, С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ) </param>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCHitTest'}  
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCHitTest'}  
     function VOCHitTest(prmConvertIntf: ICoordConvert;
       prmParams: THitTestParams): cardinal; override;
-    {$REGION ' Описание VOCGetCursor'}
-      /// <summary> возвращает курсор в зависимости от параметров </summary>
-      ///   <param name="prmHitTest"> параметры (координаты, чувствительность)  </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCGetCursor'}
+      /// <summary> РІРѕР·РІСЂР°С‰Р°РµС‚ РєСѓСЂСЃРѕСЂ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РїР°СЂР°РјРµС‚СЂРѕРІ </summary>
+      ///   <param name="prmHitTest"> РїР°СЂР°РјРµС‚СЂС‹ (РєРѕРѕСЂРґРёРЅР°С‚С‹, С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ)  </param>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCGetCursor'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCGetCursor'}
     function VOCGetCursor(prmHitTest: cardinal): cardinal; override;
-    {$REGION ' Описание VOCConstructPoint'}
-      /// <summary> команда создавния новой точки объекта </summary>
-      ///   <param name="prmPos"> позиция точки </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCConstructPoint'}
+      /// <summary> РєРѕРјР°РЅРґР° СЃРѕР·РґР°РІРЅРёСЏ РЅРѕРІРѕР№ С‚РѕС‡РєРё РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmPos"> РїРѕР·РёС†РёСЏ С‚РѕС‡РєРё </param>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCConstructPoint'}    
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCConstructPoint'}    
     function VOCConstructPoint(prmPos: TFloatPoint): cardinal; override;
-    {$REGION ' Описание VOCProcessConstruct'}
-      /// <summary> продолжение построения объекта по точкам </summary>
-      ///   <param name="prmPos"> новая позиция точки  </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCProcessConstruct'}
+      /// <summary> РїСЂРѕРґРѕР»Р¶РµРЅРёРµ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РѕР±СЉРµРєС‚Р° РїРѕ С‚РѕС‡РєР°Рј </summary>
+      ///   <param name="prmPos"> РЅРѕРІР°СЏ РїРѕР·РёС†РёСЏ С‚РѕС‡РєРё  </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCProcessConstruct'}    
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCProcessConstruct'}    
     procedure VOCProcessConstruct(prmPos: TFloatPoint); override;
-    {$REGION ' Описание VOCStopConstruct'}
-      /// <summary> прекращение построения объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCStopConstruct'}
+      /// <summary> РїСЂРµРєСЂР°С‰РµРЅРёРµ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
       /// <returns> cardinal </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCStopConstruct'}    
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCStopConstruct'}    
     function VOCStopConstruct(): cardinal; override;
   end;
 
-  {$REGION ' Описание TSimpleLineBlock'}
-    /// <summary> Объект линия </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TSimpleLineBlock'}
+    /// <summary> РћР±СЉРµРєС‚ Р»РёРЅРёСЏ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TSimpleLineBlock'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TSimpleLineBlock'}
   TSimpleLineBlock = class(TLineVisualObject)
   protected
     function NeedToStopConstruct(Count: Integer): Longint; override;
   public  
-    {$REGION ' Описание Create'}
-      /// <summary> Конструктор экземпляра класса </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Create'}
+      /// <summary> РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Create'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Create'}
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TPolyLineBlock'}
-    /// <summary> Объект ломанная линия </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TPolyLineBlock'}
+    /// <summary> РћР±СЉРµРєС‚ Р»РѕРјР°РЅРЅР°СЏ Р»РёРЅРёСЏ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TPolyLineBlock'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TPolyLineBlock'}
   TPolyLineBlock = class(TLineVisualObject)
   protected
     function NeedToStopConstruct(Count: Integer): Longint; override;
   public
-    {$REGION ' Описание VOCVControl'}
-      /// <summary> управление вершинами объекта </summary>
-      ///   <param name="prmHitTest"> параметры (координаты, чувствительность) </param>
-      ///   <param name="prmPos"> новая позиция </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ VOCVControl'}
+      /// <summary> СѓРїСЂР°РІР»РµРЅРёРµ РІРµСЂС€РёРЅР°РјРё РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmHitTest"> РїР°СЂР°РјРµС‚СЂС‹ (РєРѕРѕСЂРґРёРЅР°С‚С‹, С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ) </param>
+      ///   <param name="prmPos"> РЅРѕРІР°СЏ РїРѕР·РёС†РёСЏ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание VOCVControl'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ VOCVControl'}
     procedure VOCVControl(prmHitTest: Cardinal; prmPos: TFloatPoint); override;
     //
-    {$REGION ' Описание Create'}
-      /// <summary> Конструктор экземпляра класса </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Create'}
+      /// <summary> РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Create'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Create'}
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TRectangleBlock'}
-    /// <summary> Объект прямоугольник </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TRectangleBlock'}
+    /// <summary> РћР±СЉРµРєС‚ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TRectangleBlock'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TRectangleBlock'}
   TRectangleBlock = class(TRectVisualObject)
   protected
     procedure SpecialDraw(Canvas: TLogicalCanvas); override;
   public
-    {$REGION ' Описание Create'}
-      /// <summary> Конструктор экземпляра класса </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Create'}
+      /// <summary> РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Create'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Create'}
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TEllipseBlock'}
-    /// <summary> Объект эллипс </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TEllipseBlock'}
+    /// <summary> РћР±СЉРµРєС‚ СЌР»Р»РёРїСЃ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TEllipseBlock'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TEllipseBlock'}
   TEllipseBlock = class(TRectVisualObject)
   protected
     procedure SpecialDraw(Canvas: TLogicalCanvas); override;
   public
-    {$REGION ' Описание Create'}
-      /// <summary> Констрктор экземпляра класса </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Create'}
+      /// <summary> РљРѕРЅСЃС‚СЂРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Create'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Create'}
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TTextBlock'}
-    /// <summary> Объект текстовый блок </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TTextBlock'}
+    /// <summary> РћР±СЉРµРєС‚ С‚РµРєСЃС‚РѕРІС‹Р№ Р±Р»РѕРє </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TTextBlock'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TTextBlock'}
   TTextBlock = class(TRectVisualObject)
   private
     function GetFontJson(): string; override;
@@ -852,54 +852,54 @@ type
     procedure SpecialDraw(Canvas: TLogicalCanvas); override;
     procedure SetRotation(Value: integer); override;
   public
-    {$REGION ' Описание FieldName'}
+    {$REGION ' РћРїРёСЃР°РЅРёРµ FieldName'}
       /// <summary>
-      ///   поле для индентификации блока по его тексту в шаблоне
-      ///   (поле UniqueName может быть пустым)
+      ///   РїРѕР»Рµ РґР»СЏ РёРЅРґРµРЅС‚РёС„РёРєР°С†РёРё Р±Р»РѕРєР° РїРѕ РµРіРѕ С‚РµРєСЃС‚Сѓ РІ С€Р°Р±Р»РѕРЅРµ
+      ///   (РїРѕР»Рµ UniqueName РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј)
       /// </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание FieldName'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ FieldName'}
     FieldName: string;
-    {$REGION ' Описание MakeObjectFromJson'}
-      /// <summary> создавние объекта по json-описанию </summary>
-      ///   <param name="prmJsonObj"> json-объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MakeObjectFromJson'}
+      /// <summary> СЃРѕР·РґР°РІРЅРёРµ РѕР±СЉРµРєС‚Р° РїРѕ json-РѕРїРёСЃР°РЅРёСЋ </summary>
+      ///   <param name="prmJsonObj"> json-РѕР±СЉРµРєС‚ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MakeObjectFromJson'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MakeObjectFromJson'}
     procedure MakeObjectFromJson(prmJsonObj: ISuperObject); override;
-    {$REGION ' Описание GetObjectJson'}
-      /// <summary> возвращает json-описание графического объекта </summary>
-      ///   <param name="OffsetX"> смещение координат по X </param>
-      ///   <param name="OffsetY"> смещение координат по Y </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ GetObjectJson'}
+      /// <summary> РІРѕР·РІСЂР°С‰Р°РµС‚ json-РѕРїРёСЃР°РЅРёРµ РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="OffsetX"> СЃРјРµС‰РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РїРѕ X </param>
+      ///   <param name="OffsetY"> СЃРјРµС‰РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РїРѕ Y </param>
       /// <returns> string </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание GetObjectJson'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ GetObjectJson'}
     function GetObjectJson(OffsetX, OffsetY: integer): string; override;
-    {$REGION ' Описание Create'}
-      /// <summary> Конструктор экземпляра класса </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Create'}
+      /// <summary> РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Create'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Create'}
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание PTextField'}
-    /// <summary> Указатель на текстовое поле сложного объекта </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ PTextField'}
+    /// <summary> РЈРєР°Р·Р°С‚РµР»СЊ РЅР° С‚РµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ СЃР»РѕР¶РЅРѕРіРѕ РѕР±СЉРµРєС‚Р° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание PTextField'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ PTextField'}
   PTextField = ^TTextField;
-  {$REGION ' Описание TTextField'}
-    /// <summary> Тестовое поле сложного объекта </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TTextField'}
+    /// <summary> РўРµСЃС‚РѕРІРѕРµ РїРѕР»Рµ СЃР»РѕР¶РЅРѕРіРѕ РѕР±СЉРµРєС‚Р° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TTextField'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TTextField'}
   TTextField = record
     Name: string;
     Text: string;
   end;
 
-  // Графическое представление сложного объекта
-  {$REGION ' Описание TComplexFlyweight'}
-    /// <summary> Графическое представение сложного объекта </summary>
+  // Р“СЂР°С„РёС‡РµСЃРєРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ СЃР»РѕР¶РЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TComplexFlyweight'}
+    /// <summary> Р“СЂР°С„РёС‡РµСЃРєРѕРµ РїСЂРµРґСЃС‚Р°РІРµРЅРёРµ СЃР»РѕР¶РЅРѕРіРѕ РѕР±СЉРµРєС‚Р° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TComplexFlyweight'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TComplexFlyweight'}
   TComplexFlyweight = class(TRectVisualObject)
     Primitives: TList;
     Width: integer;
@@ -910,11 +910,11 @@ type
     destructor Destroy(); override;
   end;
 
-  // Сложный объект
-  {$REGION ' Описание TComplexBlock'}
-    /// <summary> Объект - сложный, составной, объект </summary>
+  // РЎР»РѕР¶РЅС‹Р№ РѕР±СЉРµРєС‚
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TComplexBlock'}
+    /// <summary> РћР±СЉРµРєС‚ - СЃР»РѕР¶РЅС‹Р№, СЃРѕСЃС‚Р°РІРЅРѕР№, РѕР±СЉРµРєС‚ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TComplexBlock'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TComplexBlock'}
   TComplexBlock = class(TRectVisualObject)
     TextFields: TList;
     IsMouseOver: boolean;
@@ -947,17 +947,17 @@ type
     function GetTextFieldsJson(): string;
     function GetObjectJson(OffsetX, OffsetY: integer): string; override;
     //
-    {$REGION ' Описание MoveConnections'}
-      /// <summary> Сдвинуть связи объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MoveConnections'}
+      /// <summary> РЎРґРІРёРЅСѓС‚СЊ СЃРІСЏР·Рё РѕР±СЉРµРєС‚Р° </summary>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MoveConnections'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MoveConnections'}
     function MoveConnections(): boolean;
-    {$REGION ' Описание AlignConnections'}
-      /// <summary> Выравнивание связей объекта к точкам соединения </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ AlignConnections'}
+      /// <summary> Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ СЃРІСЏР·РµР№ РѕР±СЉРµРєС‚Р° Рє С‚РѕС‡РєР°Рј СЃРѕРµРґРёРЅРµРЅРёСЏ </summary>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание AlignConnections'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ AlignConnections'}
     function AlignConnections(): boolean;
     //
     function MoveWhileDrag(var prmMovingLines: TList; prmSchema: TObject): boolean; override;
@@ -983,11 +983,11 @@ type
     //
     procedure CheckErrors(var prmErrorsList: TStringList;
       var prmErrorObjects: TList; prmSchema: TObject); override;
-    {$REGION ' Описание GetText'}
-      /// <summary> Возвращает текст всех текстовых полей элемента </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ GetText'}
+      /// <summary> Р’РѕР·РІСЂР°С‰Р°РµС‚ С‚РµРєСЃС‚ РІСЃРµС… С‚РµРєСЃС‚РѕРІС‹С… РїРѕР»РµР№ СЌР»РµРјРµРЅС‚Р° </summary>
       /// <returns> string </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание GetText'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ GetText'}
     function GetText(): string; override;
     //
     procedure AfterConstruction(); override;
@@ -1000,18 +1000,18 @@ type
     property Y: integer read GetY;
   end;
 
-  {$REGION ' Описание TGraphFacility'}
-    /// <summary> Графичекий объект - установка </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TGraphFacility'}
+    /// <summary> Р“СЂР°С„РёС‡РµРєРёР№ РѕР±СЉРµРєС‚ - СѓСЃС‚Р°РЅРѕРІРєР° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TGraphFacility'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TGraphFacility'}
   TGraphFacility = class(TComplexBlock)
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TGraphTank'}
-    /// <summary> Графичекий объект - резервуар </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TGraphTank'}
+    /// <summary> Р“СЂР°С„РёС‡РµРєРёР№ РѕР±СЉРµРєС‚ - СЂРµР·РµСЂРІСѓР°СЂ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TGraphTank'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TGraphTank'}
   TGraphTank = class(TComplexBlock)
     function CanBe2ndConnObject(prmCL: TConnectionLine;
       prmHT: cardinal): boolean; override;
@@ -1020,18 +1020,18 @@ type
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TGraphDivider'}
-    /// <summary> Графичекий объект - сумматор/делитель </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TGraphDivider'}
+    /// <summary> Р“СЂР°С„РёС‡РµРєРёР№ РѕР±СЉРµРєС‚ - СЃСѓРјРјР°С‚РѕСЂ/РґРµР»РёС‚РµР»СЊ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TGraphDivider'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TGraphDivider'}
   TGraphDivider = class(TComplexBlock)
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TGraphMeter'}
-    /// <summary> Графичекий объект - измерительный прибор </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TGraphMeter'}
+    /// <summary> Р“СЂР°С„РёС‡РµРєРёР№ РѕР±СЉРµРєС‚ - РёР·РјРµСЂРёС‚РµР»СЊРЅС‹Р№ РїСЂРёР±РѕСЂ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TGraphMeter'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TGraphMeter'}
   TGraphMeter = class(TComplexBlock)
     function CanBe2ndConnObject(prmCL: TConnectionLine;
       prmHT: cardinal): boolean; override;
@@ -1048,61 +1048,61 @@ type
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TGraphValve'}
-    /// <summary> Графичекий объект - задвижка </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TGraphValve'}
+    /// <summary> Р“СЂР°С„РёС‡РµРєРёР№ РѕР±СЉРµРєС‚ - Р·Р°РґРІРёР¶РєР° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TGraphValve'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TGraphValve'}
   TGraphValve = class(TComplexBlock)
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TGraphValveVertical'}
-    /// <summary> Графичекий объект - задвижка, расположенная вертикально </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TGraphValveVertical'}
+    /// <summary> Р“СЂР°С„РёС‡РµРєРёР№ РѕР±СЉРµРєС‚ - Р·Р°РґРІРёР¶РєР°, СЂР°СЃРїРѕР»РѕР¶РµРЅРЅР°СЏ РІРµСЂС‚РёРєР°Р»СЊРЅРѕ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TGraphValveVertical'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TGraphValveVertical'}
   TGraphValveVertical = class(TGraphValve)
     constructor Create(); override;
     procedure AfterConstruction(); override;
   end;
 
-  {$REGION ' Описание TGraphPump'}
-    /// <summary> Графичекий объект - насос </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TGraphPump'}
+    /// <summary> Р“СЂР°С„РёС‡РµРєРёР№ РѕР±СЉРµРєС‚ - РЅР°СЃРѕСЃ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TGraphPump'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TGraphPump'}
   TGraphPump = class(TComplexBlock)
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TGraphRiser'}
-    /// <summary> Графичекий объект - стояк автоналива </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TGraphRiser'}
+    /// <summary> Р“СЂР°С„РёС‡РµРєРёР№ РѕР±СЉРµРєС‚ - СЃС‚РѕСЏРє Р°РІС‚РѕРЅР°Р»РёРІР° </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TGraphRiser'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TGraphRiser'}
   TGraphRiser = class(TComplexBlock)
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TToolComplexBlock'}
-    /// <summary> Сложный объект "вспомогательный" </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TToolComplexBlock'}
+    /// <summary> РЎР»РѕР¶РЅС‹Р№ РѕР±СЉРµРєС‚ "РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№" </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TToolComplexBlock'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TToolComplexBlock'}
   TToolComplexBlock = class(TComplexBlock)
     function MakeLogicalUnit(): TPlantUnit; override;
   end;
 
-  {$REGION ' Описание TConnectionPointBlock'}
-    /// <summary> Объект точка соединения </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TConnectionPointBlock'}
+    /// <summary> РћР±СЉРµРєС‚ С‚РѕС‡РєР° СЃРѕРµРґРёРЅРµРЅРёСЏ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TConnectionPointBlock'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TConnectionPointBlock'}
   TConnectionPointBlock = class(TToolComplexBlock)
     function GetObjectJson(OffsetX, OffsetY: integer): string; override;
     procedure DrawInComplex(Params: TComplexDrawParams); override;
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание TFloodFillPointBlock'}
-    /// <summary> Объект для закрашивания контуров </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TFloodFillPointBlock'}
+    /// <summary> РћР±СЉРµРєС‚ РґР»СЏ Р·Р°РєСЂР°С€РёРІР°РЅРёСЏ РєРѕРЅС‚СѓСЂРѕРІ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TFloodFillPointBlock'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TFloodFillPointBlock'}
   TFloodFillPointBlock = class(TToolComplexBlock)
     FFloodFillBrush: TBrush;
     procedure SetFloodFillBrush(Value: TBrush);
@@ -1117,84 +1117,84 @@ type
     procedure SpecialDraw(Canvas: TLogicalCanvas); override;
     procedure DrawInComplex(Params: TComplexDrawParams); override;
   public
-    {$REGION ' Описание FillStyle'}
-      /// <summary> Стиль звполнения </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ FillStyle'}
+      /// <summary> РЎС‚РёР»СЊ Р·РІРїРѕР»РЅРµРЅРёСЏ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание FillStyle'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ FillStyle'}
     FillStyle: TFillStyle;
-    {$REGION ' Описание FillColor'}
-      /// <summary> Цвет заполнения </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ FillColor'}
+      /// <summary> Р¦РІРµС‚ Р·Р°РїРѕР»РЅРµРЅРёСЏ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание FillColor'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ FillColor'}
     FillColor: TColor;
-    {$REGION ' Описание MakeObjectFromJson'}
-      /// <summary> создавние объекта по json-описанию </summary>
-      ///   <param name="prmJsonObj"> json-объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MakeObjectFromJson'}
+      /// <summary> СЃРѕР·РґР°РІРЅРёРµ РѕР±СЉРµРєС‚Р° РїРѕ json-РѕРїРёСЃР°РЅРёСЋ </summary>
+      ///   <param name="prmJsonObj"> json-РѕР±СЉРµРєС‚ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MakeObjectFromJson'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MakeObjectFromJson'}
     procedure MakeObjectFromJson(prmJsonObj: ISuperObject); override;
-    {$REGION ' Описание FloodFillBrush'}
-      /// <summary> Кисть заполнения </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ FloodFillBrush'}
+      /// <summary> РљРёСЃС‚СЊ Р·Р°РїРѕР»РЅРµРЅРёСЏ </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание FloodFillBrush'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ FloodFillBrush'}
     property FloodFillBrush: TBrush read FFloodFillBrush write SetFloodFillBrush;
-    {$REGION ' Описание Point'}
-      /// <summary> точка центра объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Point'}
+      /// <summary> С‚РѕС‡РєР° С†РµРЅС‚СЂР° РѕР±СЉРµРєС‚Р° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Point'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Point'}
     property Point: TFloatPoint read GetPoint;
   end;
 
-  {$REGION ' Описание PIntersection'}
-    /// <summary> Ссылка на объект пересечение </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ PIntersection'}
+    /// <summary> РЎСЃС‹Р»РєР° РЅР° РѕР±СЉРµРєС‚ РїРµСЂРµСЃРµС‡РµРЅРёРµ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание PIntersection'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ PIntersection'}
   PIntersection = ^TIntersection;
-  {$REGION ' Описание TIntersection'}
-    /// <summary> Объект пересечение </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TIntersection'}
+    /// <summary> РћР±СЉРµРєС‚ РїРµСЂРµСЃРµС‡РµРЅРёРµ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TIntersection'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TIntersection'}
   TIntersection = record
     VertexID: integer;
     Line: TConnectionLine;
     Distance: integer;
-    pt0, // пересечение отрезков
-    pt1, // верхний левый
-    pt2, // правый нижний
-    pt3, // старт дуги
-    pt4  // финиш дуги
+    pt0, // РїРµСЂРµСЃРµС‡РµРЅРёРµ РѕС‚СЂРµР·РєРѕРІ
+    pt1, // РІРµСЂС…РЅРёР№ Р»РµРІС‹Р№
+    pt2, // РїСЂР°РІС‹Р№ РЅРёР¶РЅРёР№
+    pt3, // СЃС‚Р°СЂС‚ РґСѓРіРё
+    pt4  // С„РёРЅРёС€ РґСѓРіРё
     : TFloatPoint;
   end;
-  {$REGION ' Описание TIntersections'}
-    /// <summary> Массив пересечений </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TIntersections'}
+    /// <summary> РњР°СЃСЃРёРІ РїРµСЂРµСЃРµС‡РµРЅРёР№ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TIntersections'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TIntersections'}
   TIntersections = array of TIntersection;
 
-  {$REGION ' Описание PMeterConnection'}
-    /// <summary> Указатель на объект соединение с измерительным прибором </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ PMeterConnection'}
+    /// <summary> РЈРєР°Р·Р°С‚РµР»СЊ РЅР° РѕР±СЉРµРєС‚ СЃРѕРµРґРёРЅРµРЅРёРµ СЃ РёР·РјРµСЂРёС‚РµР»СЊРЅС‹Рј РїСЂРёР±РѕСЂРѕРј </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание PMeterConnection'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ PMeterConnection'}
   PMeterConnection = ^TMeterConnection;
-  {$REGION ' Описание TMeterConnection'}
-    /// <summary>  Объект - соединение с измерительным прибором </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TMeterConnection'}
+    /// <summary>  РћР±СЉРµРєС‚ - СЃРѕРµРґРёРЅРµРЅРёРµ СЃ РёР·РјРµСЂРёС‚РµР»СЊРЅС‹Рј РїСЂРёР±РѕСЂРѕРј </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TMeterConnection'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TMeterConnection'}
   TMeterConnection = record
     Line: TConnectionLine;
     Vertex: integer;
     Scale: extended;
   end;
-  {$REGION ' Описание TMeterConnections'}
-    /// <summary> Массив соединений с измерительными приборами </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TMeterConnections'}
+    /// <summary> РњР°СЃСЃРёРІ СЃРѕРµРґРёРЅРµРЅРёР№ СЃ РёР·РјРµСЂРёС‚РµР»СЊРЅС‹РјРё РїСЂРёР±РѕСЂР°РјРё </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TMeterConnections'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TMeterConnections'}
   TMeterConnections = array of TMeterConnection;
 
-  {$REGION ' Описание TConnectionLine'}
-    /// <summary> Объект - соединительняа линия </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TConnectionLine'}
+    /// <summary> РћР±СЉРµРєС‚ - СЃРѕРµРґРёРЅРёС‚РµР»СЊРЅСЏР° Р»РёРЅРёСЏ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TConnectionLine'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TConnectionLine'}
   TConnectionLine = class(TPolyLineBlock)
     Object1: TBaseVisualObject;
     ConnPoint1: TBaseVisualObject;
@@ -1259,111 +1259,111 @@ type
   protected
     procedure SpecialDraw(Canvas: TLogicalCanvas); override;
   public
-    {$REGION ' Описание Direction'}
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Direction'}
       /// <summary>
-      ///   Направление линии
-      ///   0 - без направления;
-      ///   1 - из начала в конец;
-      ///   2 - из конца в начало;
+      ///   РќР°РїСЂР°РІР»РµРЅРёРµ Р»РёРЅРёРё
+      ///   0 - Р±РµР· РЅР°РїСЂР°РІР»РµРЅРёСЏ;
+      ///   1 - РёР· РЅР°С‡Р°Р»Р° РІ РєРѕРЅРµС†;
+      ///   2 - РёР· РєРѕРЅС†Р° РІ РЅР°С‡Р°Р»Рѕ;
       /// </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Direction'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Direction'}
     Direction: byte;
-    {$REGION ' Описание IsMeterConnector'}
-      /// <summary> Является ли соединением с измерительным прибором </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ IsMeterConnector'}
+      /// <summary> РЇРІР»СЏРµС‚СЃСЏ Р»Рё СЃРѕРµРґРёРЅРµРЅРёРµРј СЃ РёР·РјРµСЂРёС‚РµР»СЊРЅС‹Рј РїСЂРёР±РѕСЂРѕРј </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание IsMeterConnector'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ IsMeterConnector'}
     IsMeterConnector: boolean;
-    {$REGION ' Описание State'}
+    {$REGION ' РћРїРёСЃР°РЅРёРµ State'}
       /// <summary>
-      ///   Состояние
-      ///   0 - по умолчанию, соединение установлено (черный)
-      ///   1 - при конструировании - один из соединяемых объектов не определен
-      ///   2 - при конструировании - оба объекта определены
-      ///   3 - на схеме просмотра - соединение не задействовано (т. к. задвижка закрыта)
+      ///   РЎРѕСЃС‚РѕСЏРЅРёРµ
+      ///   0 - РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, СЃРѕРµРґРёРЅРµРЅРёРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ (С‡РµСЂРЅС‹Р№)
+      ///   1 - РїСЂРё РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёРё - РѕРґРёРЅ РёР· СЃРѕРµРґРёРЅСЏРµРјС‹С… РѕР±СЉРµРєС‚РѕРІ РЅРµ РѕРїСЂРµРґРµР»РµРЅ
+      ///   2 - РїСЂРё РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёРё - РѕР±Р° РѕР±СЉРµРєС‚Р° РѕРїСЂРµРґРµР»РµРЅС‹
+      ///   3 - РЅР° СЃС…РµРјРµ РїСЂРѕСЃРјРѕС‚СЂР° - СЃРѕРµРґРёРЅРµРЅРёРµ РЅРµ Р·Р°РґРµР№СЃС‚РІРѕРІР°РЅРѕ (С‚. Рє. Р·Р°РґРІРёР¶РєР° Р·Р°РєСЂС‹С‚Р°)
       /// </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание State'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ State'}
     State: byte;
     //
-    {$REGION ' Описание MakeObjectFromJson'}
-      /// <summary> создание объекта по json-описанию </summary>
-      ///   <param name="prmJsonObj"> json-объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ MakeObjectFromJson'}
+      /// <summary> СЃРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° РїРѕ json-РѕРїРёСЃР°РЅРёСЋ </summary>
+      ///   <param name="prmJsonObj"> json-РѕР±СЉРµРєС‚ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание MakeObjectFromJson'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ MakeObjectFromJson'}
     procedure MakeObjectFromJson(prmJsonObj: ISuperObject); override;
     //
-    {$REGION ' Описание CheckErrors'}
-      /// <summary> проверка объекта на наличие ошибок согласованности </summary>
-      ///   <param name="prmErrorsList"> список ошибок </param>
-      ///   <param name="prmErrorObjects"> список объектов с ошибками </param>
-      ///   <param name="prmSchema"> схема, которой принадлежит объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ CheckErrors'}
+      /// <summary> РїСЂРѕРІРµСЂРєР° РѕР±СЉРµРєС‚Р° РЅР° РЅР°Р»РёС‡РёРµ РѕС€РёР±РѕРє СЃРѕРіР»Р°СЃРѕРІР°РЅРЅРѕСЃС‚Рё </summary>
+      ///   <param name="prmErrorsList"> СЃРїРёСЃРѕРє РѕС€РёР±РѕРє </param>
+      ///   <param name="prmErrorObjects"> СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ СЃ РѕС€РёР±РєР°РјРё </param>
+      ///   <param name="prmSchema"> СЃС…РµРјР°, РєРѕС‚РѕСЂРѕР№ РїСЂРёРЅР°РґР»РµР¶РёС‚ РѕР±СЉРµРєС‚ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание CheckErrors'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CheckErrors'}
     procedure CheckErrors(var prmErrorsList: TStringList;
       var prmErrorObjects: TList; prmSchema: TObject); override;
     //
-    {$REGION ' Описание CheckIntersections'}
-      /// <summary> проврка пересечений линии с другими линиями схемы </summary>
-      ///   <param name="prmObjects"> список объектов схемы </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ CheckIntersections'}
+      /// <summary> РїСЂРѕРІСЂРєР° РїРµСЂРµСЃРµС‡РµРЅРёР№ Р»РёРЅРёРё СЃ РґСЂСѓРіРёРјРё Р»РёРЅРёСЏРјРё СЃС…РµРјС‹ </summary>
+      ///   <param name="prmObjects"> СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ СЃС…РµРјС‹ </param>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание CheckIntersections'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ CheckIntersections'}
     function CheckIntersections(prmObjects: TList): boolean;
-    {$REGION ' Описание FindConnectionObjects'}
-      /// <summary> поиск среди объектов схемы тех, к оторым может быть присоединена линия </summary>
-      ///   <param name="prmSchema"> схема, которой принадлежит объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ FindConnectionObjects'}
+      /// <summary> РїРѕРёСЃРє СЃСЂРµРґРё РѕР±СЉРµРєС‚РѕРІ СЃС…РµРјС‹ С‚РµС…, Рє РѕС‚РѕСЂС‹Рј РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСЂРёСЃРѕРµРґРёРЅРµРЅР° Р»РёРЅРёСЏ </summary>
+      ///   <param name="prmSchema"> СЃС…РµРјР°, РєРѕС‚РѕСЂРѕР№ РїСЂРёРЅР°РґР»РµР¶РёС‚ РѕР±СЉРµРєС‚ </param>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание FindConnectionObjects'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ FindConnectionObjects'}
     procedure FindConnectionObjects(prmSchema: TObject);
     //
-    {$REGION ' Описание Create'}
-      /// <summary> Конструктор экземпляра объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Create'}
+      /// <summary> РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РѕР±СЉРµРєС‚Р° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Create'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Create'}
     constructor Create(); override;
-    {$REGION ' Описание Destroy'}
-      /// <summary> Деструктор экземпляра объекта </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Destroy'}
+      /// <summary> Р”РµСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РѕР±СЉРµРєС‚Р° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Destroy'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Destroy'}
     destructor Destroy(); override;
   end;
 
-  {$REGION ' Описание TSelector'}
-    /// <summary> Селектор объектов </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ TSelector'}
+    /// <summary> РЎРµР»РµРєС‚РѕСЂ РѕР±СЉРµРєС‚РѕРІ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание TSelector'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ TSelector'}
   TSelector = class(TRectVisualObject)
   protected
     procedure SpecialDraw(Canvas: TLogicalCanvas); override;
   public
-    {$REGION ' Описание FinishConstruct'}
-      /// <summary> действия при завершении создания объекта </summary>
-      ///   <param name="prmPU"> созданный логический объект </param>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ FinishConstruct'}
+      /// <summary> РґРµР№СЃС‚РІРёСЏ РїСЂРё Р·Р°РІРµСЂС€РµРЅРёРё СЃРѕР·РґР°РЅРёСЏ РѕР±СЉРµРєС‚Р° </summary>
+      ///   <param name="prmPU"> СЃРѕР·РґР°РЅРЅС‹Р№ Р»РѕРіРёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚ </param>
       /// <returns> boolean </returns>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание FinishConstruct'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ FinishConstruct'}
     function FinishConstruct(var prmPU: TPlantUnit): boolean; override;
-    {$REGION ' Описание Create'}
-      /// <summary> конструктор экземпляра класса </summary>
+    {$REGION ' РћРїРёСЃР°РЅРёРµ Create'}
+      /// <summary> РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° </summary>
       /// <author> evdokimov_v_i </author>
-    {$ENDREGION ' Описание Create'}
+    {$ENDREGION ' РћРїРёСЃР°РЅРёРµ Create'}
     constructor Create(); override;
   end;
 
-  {$REGION ' Описание GetVisualObjectClassByName'}
-    /// <summary> возвращает класс графического объекта по его названию </summary>
-    ///   <param name="prmName"> название объекта </param>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ GetVisualObjectClassByName'}
+    /// <summary> РІРѕР·РІСЂР°С‰Р°РµС‚ РєР»Р°СЃСЃ РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ РѕР±СЉРµРєС‚Р° РїРѕ РµРіРѕ РЅР°Р·РІР°РЅРёСЋ </summary>
+    ///   <param name="prmName"> РЅР°Р·РІР°РЅРёРµ РѕР±СЉРµРєС‚Р° </param>
     /// <returns> TVisualObjectClass </returns>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание GetVisualObjectClassByName'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ GetVisualObjectClassByName'}
   function GetVisualObjectClassByName(prmName: string): TVisualObjectClass;
 
 var
-  {$REGION ' Описание flMultiselect'}
-    /// <summary> Флаг, сигнализирующий о том, что выбраны несколько объектов </summary>
+  {$REGION ' РћРїРёСЃР°РЅРёРµ flMultiselect'}
+    /// <summary> Р¤Р»Р°Рі, СЃРёРіРЅР°Р»РёР·РёСЂСѓСЋС‰РёР№ Рѕ С‚РѕРј, С‡С‚Рѕ РІС‹Р±СЂР°РЅС‹ РЅРµСЃРєРѕР»СЊРєРѕ РѕР±СЉРµРєС‚РѕРІ </summary>
     /// <author> evdokimov_v_i </author>
-  {$ENDREGION ' Описание flMultiselect'}
+  {$ENDREGION ' РћРїРёСЃР°РЅРёРµ flMultiselect'}
   flMultiselect: boolean;
 
 implementation
@@ -1400,7 +1400,7 @@ procedure TBaseVisualObject.AddBasePoint(X, Y: Extended);
 var
   NewBasePoint: PFloatPoint;
 begin
-  // Выделяем память под новую точку и добавляем указатель на нее в список
+  // Р’С‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РїРѕРґ РЅРѕРІСѓСЋ С‚РѕС‡РєСѓ Рё РґРѕР±Р°РІР»СЏРµРј СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅРµРµ РІ СЃРїРёСЃРѕРє
   New(NewBasePoint);
   NewBasePoint^.X := X;
   NewBasePoint^.Y := Y;
@@ -1463,12 +1463,12 @@ begin
   begin
     if not Assigned(LogicalUnit) then
     begin
-      AddError(prmErrorsList, prmErrorObjects, 'логический объект не определен');
+      AddError(prmErrorsList, prmErrorObjects, 'Р»РѕРіРёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚ РЅРµ РѕРїСЂРµРґРµР»РµРЅ');
       exit;
     end;
     if VC.LogicalSchema.GetUnitByName(LogicalUnit.Name) = nil then
     begin
-      AddError(prmErrorsList, prmErrorObjects, 'логический объект не найден');
+      AddError(prmErrorsList, prmErrorObjects, 'Р»РѕРіРёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚ РЅРµ РЅР°Р№РґРµРЅ');
       exit;
     end;
   end;
@@ -1479,7 +1479,7 @@ procedure TBaseVisualObject.ClearBasePoints;
 var
   i: Integer;
 begin
-  // Освобождаем память под базовые точки и очищаем список от указателей на них
+  // РћСЃРІРѕР±РѕР¶РґР°РµРј РїР°РјСЏС‚СЊ РїРѕРґ Р±Р°Р·РѕРІС‹Рµ С‚РѕС‡РєРё Рё РѕС‡РёС‰Р°РµРј СЃРїРёСЃРѕРє РѕС‚ СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РЅРёС…
   for i := 0 to FBasePoints.Count - 1 do
     Dispose(PFloatPoint(FBasePoints[i]));
   FBasePoints.Clear;
@@ -1536,8 +1536,8 @@ end;
 
 procedure TBaseVisualObject.DeleteBasePoint(Index: Integer);
 begin
-  // Освобождаем память, выделенную для хранения координат базовых точек, и удаляем
-  // указатель из списка
+  // РћСЃРІРѕР±РѕР¶РґР°РµРј РїР°РјСЏС‚СЊ, РІС‹РґРµР»РµРЅРЅСѓСЋ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚ Р±Р°Р·РѕРІС‹С… С‚РѕС‡РµРє, Рё СѓРґР°Р»СЏРµРј
+  // СѓРєР°Р·Р°С‚РµР»СЊ РёР· СЃРїРёСЃРєР°
   Dispose(PFloatPoint(FBasePoints[Index]));
   FBasePoints.Delete(Index);
   Change(3);
@@ -1552,7 +1552,7 @@ destructor TBaseVisualObject.Destroy;
 var
   i: Integer;
 begin
-  // Перед уничтожением списка, освобождаем память под вершины
+  // РџРµСЂРµРґ СѓРЅРёС‡С‚РѕР¶РµРЅРёРµРј СЃРїРёСЃРєР°, РѕСЃРІРѕР±РѕР¶РґР°РµРј РїР°РјСЏС‚СЊ РїРѕРґ РІРµСЂС€РёРЅС‹
   for i := 0 to FBasePoints.Count - 1 do
     Dispose(PFloatPoint(FBasePoints[i]));
   FBasePoints.Free;
@@ -1803,7 +1803,7 @@ procedure TBaseVisualObject.InsertBasePoint(Index: Integer; X, Y: Extended);
 var
   NewBasePoint: PFloatPoint;
 begin
-  // Выделяем память под новую точку и добавляем указатель на нее в список
+  // Р’С‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РїРѕРґ РЅРѕРІСѓСЋ С‚РѕС‡РєСѓ Рё РґРѕР±Р°РІР»СЏРµРј СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅРµРµ РІ СЃРїРёСЃРѕРє
   New(NewBasePoint);
   NewBasePoint^.X := X;
   NewBasePoint^.Y := Y;
@@ -1972,19 +1972,19 @@ var
 begin
   if FDragging then
   begin
-    // Раскладываем FDragHitTest на общий код области и индекс
+    // Р Р°СЃРєР»Р°РґС‹РІР°РµРј FDragHitTest РЅР° РѕР±С‰РёР№ РєРѕРґ РѕР±Р»Р°СЃС‚Рё Рё РёРЅРґРµРєСЃ
     HitTest := FDragHitTest and $FFFF0000;
     Index := FDragHitTest and $0000FFFF;
     //
-    // В зависимости от того, над какой областью мышь, посылаем различные
-    // команды
+    // Р’ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ С‚РѕРіРѕ, РЅР°Рґ РєР°РєРѕР№ РѕР±Р»Р°СЃС‚СЊСЋ РјС‹С€СЊ, РїРѕСЃС‹Р»Р°РµРј СЂР°Р·Р»РёС‡РЅС‹Рµ
+    // РєРѕРјР°РЅРґС‹
     case HitTest of
       HT_IN:
         begin
-          // Определяем величину смещения
+          // РћРїСЂРµРґРµР»СЏРµРј РІРµР»РёС‡РёРЅСѓ СЃРјРµС‰РµРЅРёСЏ
           DeltaX := prmNewPos.X - FDragStartPos.X;
           DeltaY := prmNewPos.Y - FDragStartPos.Y;
-          // В следующий раз смещение будем считать от текущей позиции
+          // Р’ СЃР»РµРґСѓСЋС‰РёР№ СЂР°Р· СЃРјРµС‰РµРЅРёРµ Р±СѓРґРµРј СЃС‡РёС‚Р°С‚СЊ РѕС‚ С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё
           FDragStartPos := prmNewPos;
           VOCMove(DeltaX, DeltaY);
         end;
@@ -2021,7 +2021,7 @@ begin
   //
   BeginUpdate(1);
   try
-    // Перемещаем все вершины на величину смещения
+    // РџРµСЂРµРјРµС‰Р°РµРј РІСЃРµ РІРµСЂС€РёРЅС‹ РЅР° РІРµР»РёС‡РёРЅСѓ СЃРјРµС‰РµРЅРёСЏ
     for i := 0 to BasePointsCount - 1 do begin
       Pos := BasePoints[i];
       Pos.X := Pos.X + prmDeltaX;
@@ -2088,10 +2088,10 @@ end;
 
 function TRectVisualObject.GetVertex(Index: Integer): TFloatPoint;
 begin
-  // 0 - левый верхний угол
-  // 1 - правый верхний угол
-  // 2 - правый нижний угол
-  // 3 - левый нижний угол
+  // 0 - Р»РµРІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР»
+  // 1 - РїСЂР°РІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР»
+  // 2 - РїСЂР°РІС‹Р№ РЅРёР¶РЅРёР№ СѓРіРѕР»
+  // 3 - Р»РµРІС‹Р№ РЅРёР¶РЅРёР№ СѓРіРѕР»
   case Index of
     0: Result := BasePoints[0];
     1:
@@ -2128,8 +2128,8 @@ procedure TRectVisualObject.SetVertex(Index: Integer;
 var
   Point: TFloatPoint;
 begin
-  // Устанавливаем новые значения базовым точкам с учетом того, что 0-ая точка
-  // всегда должна быть левее и выше 1-ой
+  // РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РЅРѕРІС‹Рµ Р·РЅР°С‡РµРЅРёСЏ Р±Р°Р·РѕРІС‹Рј С‚РѕС‡РєР°Рј СЃ СѓС‡РµС‚РѕРј С‚РѕРіРѕ, С‡С‚Рѕ 0-Р°СЏ С‚РѕС‡РєР°
+  // РІСЃРµРіРґР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ Р»РµРІРµРµ Рё РІС‹С€Рµ 1-РѕР№
   case Index of
     0:
       begin
@@ -2172,36 +2172,36 @@ function TRectVisualObject.VOCConstructPoint(prmPos: TFloatPoint): cardinal;
 begin
   Result := 0;
   //
-  // Если объект не находится в режиме конструирования - переводим его в этот
-  // режим и устанавливаем начальный номер текущей редактируемой точки
+  // Р•СЃР»Рё РѕР±СЉРµРєС‚ РЅРµ РЅР°С…РѕРґРёС‚СЃСЏ РІ СЂРµР¶РёРјРµ РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёСЏ - РїРµСЂРµРІРѕРґРёРј РµРіРѕ РІ СЌС‚РѕС‚
+  // СЂРµР¶РёРј Рё СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РЅР°С‡Р°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ С‚РµРєСѓС‰РµР№ СЂРµРґР°РєС‚РёСЂСѓРµРјРѕР№ С‚РѕС‡РєРё
   if not FConstructing then
   begin
     FConstructing := True;
     FCurrentPoint := 0;
   end;
-  // В зависимости от номера редактируемой точки, выполняем нужные действия
-  // позиционирования
+  // Р’ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РЅРѕРјРµСЂР° СЂРµРґР°РєС‚РёСЂСѓРµРјРѕР№ С‚РѕС‡РєРё, РІС‹РїРѕР»РЅСЏРµРј РЅСѓР¶РЅС‹Рµ РґРµР№СЃС‚РІРёСЏ
+  // РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёСЏ
   case FCurrentPoint of
     0:
       begin
-        // Перемещаем все точки объекта в стартовую
+        // РџРµСЂРµРјРµС‰Р°РµРј РІСЃРµ С‚РѕС‡РєРё РѕР±СЉРµРєС‚Р° РІ СЃС‚Р°СЂС‚РѕРІСѓСЋ
         BasePoints[0] := prmPos;
         BasePoints[1] := prmPos;
-        // Конструирование не окончено
+        // РљРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёРµ РЅРµ РѕРєРѕРЅС‡РµРЅРѕ
         Result := 1;
       end;
     1:
       begin
-        // Перемещаем точку с индексом 1
+        // РџРµСЂРµРјРµС‰Р°РµРј С‚РѕС‡РєСѓ СЃ РёРЅРґРµРєСЃРѕРј 1
         BasePoints[1] := prmPos;
-        // Конструирование окончено
+        // РљРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёРµ РѕРєРѕРЅС‡РµРЅРѕ
         FConstructing := False;
         Result := 0;
       end;
   else
     TList.Error(@SListIndexError, FCurrentPoint);
   end;
-  // Инкремент индекса текущей точки
+  // РРЅРєСЂРµРјРµРЅС‚ РёРЅРґРµРєСЃР° С‚РµРєСѓС‰РµР№ С‚РѕС‡РєРё
   Inc(FCurrentPoint);
 end;
 
@@ -2223,71 +2223,71 @@ function TRectVisualObject.VOCHitTest(prmConvertIntf: ICoordConvert;
 var
   sX1, sY1, sX2, sY2: Integer;
 begin
-  // Переводим в экранные координаты
+  // РџРµСЂРµРІРѕРґРёРј РІ СЌРєСЂР°РЅРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹
   prmConvertIntf.LogToScreen(BasePoints[0].X, BasePoints[0].Y, sX1, sY1);
   prmConvertIntf.LogToScreen(BasePoints[1].X, BasePoints[1].Y, sX2, sY2);
-  // Выявляем область в точке
+  // Р’С‹СЏРІР»СЏРµРј РѕР±Р»Р°СЃС‚СЊ РІ С‚РѕС‡РєРµ
   Result := HT_OUT;
   if (Abs(prmParams.XPos - sX1) <= prmParams.Tolerance) and
      (Abs(prmParams.YPos - sY1) <= prmParams.Tolerance)
   then begin
-    // Вершина 0
+    // Р’РµСЂС€РёРЅР° 0
     Result := HT_VERTEX + 0;
     exit;
   end else
   if (Abs(prmParams.XPos - sX2) <= prmParams.Tolerance) and
      (Abs(prmParams.YPos - sY1) <= prmParams.Tolerance)
   then begin
-    // Вершина 1
+    // Р’РµСЂС€РёРЅР° 1
     Result := HT_VERTEX + 1;
     exit;
   end else
   if (Abs(prmParams.XPos - sX2) <= prmParams.Tolerance) and
      (Abs(prmParams.YPos - sY2) <= prmParams.Tolerance)
   then begin
-    // Вершина 2
+    // Р’РµСЂС€РёРЅР° 2
     Result := HT_VERTEX + 2;
     exit;
   end else
   if (Abs(prmParams.XPos - sX1) <= prmParams.Tolerance) and
      (Abs(prmParams.YPos - sY2) <= prmParams.Tolerance)
   then begin
-    // Вершина 3
+    // Р’РµСЂС€РёРЅР° 3
     Result := HT_VERTEX + 3;
     exit;
   end else
   if (Abs(prmParams.XPos - sX1) <= prmParams.Tolerance) and
      (prmParams.YPos > sY1) and (prmParams.YPos < sY2)
   then begin
-    // Сторона 0
+    // РЎС‚РѕСЂРѕРЅР° 0
     Result := HT_SIDE + 0;
     exit;
   end else
   if (Abs(prmParams.YPos - sY1) <= prmParams.Tolerance) and
      (prmParams.XPos > sX1) and (prmParams.XPos < sX2)
   then begin
-    // Сторона 1
+    // РЎС‚РѕСЂРѕРЅР° 1
     Result := HT_SIDE + 1;
     exit;
   end else
   if (Abs(prmParams.XPos - sX2) <= prmParams.Tolerance) and
      (prmParams.YPos > sY1) and (prmParams.YPos < sY2)
   then begin
-    // Сторона 2
+    // РЎС‚РѕСЂРѕРЅР° 2
     Result := HT_SIDE + 2;
     exit;
   end else
   if (Abs(prmParams.YPos - sY2) <= prmParams.Tolerance) and
      (prmParams.XPos > sX1) and (prmParams.XPos < sX2)
   then begin
-    // Сторона 1
+    // РЎС‚РѕСЂРѕРЅР° 1
     Result := HT_SIDE + 3;
     exit;
   end else
   if (prmParams.XPos > sX1) and (prmParams.XPos < sX2) and
      (prmParams.YPos > sY1) and (prmParams.YPos < sY2)
   then begin
-    // Внутри
+    // Р’РЅСѓС‚СЂРё
     Result := HT_IN;
     exit;
   end;
@@ -2295,7 +2295,7 @@ end;
 
 procedure TRectVisualObject.VOCProcessConstruct(prmPos: TFloatPoint);
 begin
-  // Перемещаем вершину, соответствующую текущей точке.
+  // РџРµСЂРµРјРµС‰Р°РµРј РІРµСЂС€РёРЅСѓ, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰СѓСЋ С‚РµРєСѓС‰РµР№ С‚РѕС‡РєРµ.
   if FConstructing then
     case FCurrentPoint of
       0: Vertex[0] := prmPos;
@@ -2312,10 +2312,10 @@ begin
   P2 := Vertex[2];
   NX := prmNewPos.X;
   NY := prmNewPos.Y;
-  // 0 - левая сторона
-  // 1 - верхняя сторона
-  // 2 - правая сторона
-  // 3 - нижняя сторона
+  // 0 - Р»РµРІР°СЏ СЃС‚РѕСЂРѕРЅР°
+  // 1 - РІРµСЂС…РЅСЏСЏ СЃС‚РѕСЂРѕРЅР°
+  // 2 - РїСЂР°РІР°СЏ СЃС‚РѕСЂРѕРЅР°
+  // 3 - РЅРёР¶РЅСЏСЏ СЃС‚РѕСЂРѕРЅР°
   case prmIndex of
     0:
       begin
@@ -2351,8 +2351,8 @@ begin
   Result := 1;
   if FConstructing then
   begin
-    // Выходим из режима конструирования сигнализируем вызывающий код о том,
-    // что объект не достроен до конца
+    // Р’С‹С…РѕРґРёРј РёР· СЂРµР¶РёРјР° РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёСЏ СЃРёРіРЅР°Р»РёР·РёСЂСѓРµРј РІС‹Р·С‹РІР°СЋС‰РёР№ РєРѕРґ Рѕ С‚РѕРј,
+    // С‡С‚Рѕ РѕР±СЉРµРєС‚ РЅРµ РґРѕСЃС‚СЂРѕРµРЅ РґРѕ РєРѕРЅС†Р°
     FConstructing := False;
     Result := 0;
   end;
@@ -2363,7 +2363,7 @@ end;
 procedure TLineVisualObject.SpecialDraw(Canvas: TLogicalCanvas);
 var i: integer;
 begin
-  // Соединяем вершины линиями
+  // РЎРѕРµРґРёРЅСЏРµРј РІРµСЂС€РёРЅС‹ Р»РёРЅРёСЏРјРё
   for i := 1 to VertexesCount - 1 do
     Canvas.DrawLine(
       Vertex[i - 1].X + DrawOffsetX,
@@ -2401,8 +2401,8 @@ end;
 
 function TLineVisualObject.VOCConstructPoint(prmPos: TFloatPoint): cardinal;
 begin
-  // Если конструирование только начато - переводим объект в режим
-  // конструирования, устанавливаем начальные параметры и фиксируем первую точку
+  // Р•СЃР»Рё РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёРµ С‚РѕР»СЊРєРѕ РЅР°С‡Р°С‚Рѕ - РїРµСЂРµРІРѕРґРёРј РѕР±СЉРµРєС‚ РІ СЂРµР¶РёРј
+  // РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёСЏ, СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РЅР°С‡Р°Р»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ Рё С„РёРєСЃРёСЂСѓРµРј РїРµСЂРІСѓСЋ С‚РѕС‡РєСѓ
   if not FConstructing then
   begin
     FConstructing := True;
@@ -2415,8 +2415,8 @@ begin
       EndUpdate;
     end;
   end;
-  // Ответ на вопрос, необходимо ли завершить конструирование, перекладываем
-  // на виртуальный метод NeedToStopConstruct
+  // РћС‚РІРµС‚ РЅР° РІРѕРїСЂРѕСЃ, РЅРµРѕР±С…РѕРґРёРјРѕ Р»Рё Р·Р°РІРµСЂС€РёС‚СЊ РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёРµ, РїРµСЂРµРєР»Р°РґС‹РІР°РµРј
+  // РЅР° РІРёСЂС‚СѓР°Р»СЊРЅС‹Р№ РјРµС‚РѕРґ NeedToStopConstruct
   Result := NeedToStopConstruct(FCurrentPoint + 1);
   //
   if Result = 0 then
@@ -2424,7 +2424,7 @@ begin
     FConstructing := False;
     exit;
   end;
-  // Добавляем новую точку и изменяем индекс редактируемой
+  // Р”РѕР±Р°РІР»СЏРµРј РЅРѕРІСѓСЋ С‚РѕС‡РєСѓ Рё РёР·РјРµРЅСЏРµРј РёРЅРґРµРєСЃ СЂРµРґР°РєС‚РёСЂСѓРµРјРѕР№
   AddBasePoint(prmPos.X, prmPos.Y);
   Inc(FCurrentPoint);
 end;
@@ -2446,17 +2446,17 @@ begin
   Result := HT_OUT;
   for i := VertexesCount - 1 downto 0 do
   begin
-    // Переводим в экранные координаты
+    // РџРµСЂРµРІРѕРґРёРј РІ СЌРєСЂР°РЅРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹
     prmConvertIntf.LogToScreen(Vertex[i].X, Vertex[i].Y, sX1, sY1);
     if (Abs(prmParams.XPos - sX1) <= prmParams.Tolerance) and
        (Abs(prmParams.YPos - sY1) <= prmParams.Tolerance) then
     begin
-      // Вершина i
+      // Р’РµСЂС€РёРЅР° i
       Result := HT_VERTEX + i;
       exit;
     end;
   end;
-  // Не на линии ли?
+  // РќРµ РЅР° Р»РёРЅРёРё Р»Рё?
   for i := VertexesCount - 1 downto 1 do
   begin
     prmConvertIntf.LogToScreen(Vertex[i].X, Vertex[i].Y, sX1, sY1);
@@ -2464,7 +2464,7 @@ begin
     D := LineDistance(prmParams.XPos, prmParams.YPos, sX1, sY1, sX2, sY2);
     if D <= prmParams.Tolerance then
     begin
-      // На линии
+      // РќР° Р»РёРЅРёРё
       Result := HT_IN + i - 1;
       exit;
     end;
@@ -2473,7 +2473,7 @@ end;
 
 procedure TLineVisualObject.VOCProcessConstruct(prmPos: TFloatPoint);
 begin
-  // Перемещаем текущую точку
+  // РџРµСЂРµРјРµС‰Р°РµРј С‚РµРєСѓС‰СѓСЋ С‚РѕС‡РєСѓ
   if FConstructing then
     BasePoints[FCurrentPoint] := prmPos;
 end;
@@ -2483,8 +2483,8 @@ begin
   Result := 1;
   if FConstructing then
   begin
-    // Выходим из режима конструирования, удаляем текущую точку и если
-    // установлено меньше двух точек - возвращаем 0
+    // Р’С‹С…РѕРґРёРј РёР· СЂРµР¶РёРјР° РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёСЏ, СѓРґР°Р»СЏРµРј С‚РµРєСѓС‰СѓСЋ С‚РѕС‡РєСѓ Рё РµСЃР»Рё
+    // СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ РјРµРЅСЊС€Рµ РґРІСѓС… С‚РѕС‡РµРє - РІРѕР·РІСЂР°С‰Р°РµРј 0
     FConstructing := False;
     DeleteBasePoint(FCurrentPoint);
     if VertexesCount < 2 then
@@ -2517,7 +2517,7 @@ end;
 
 function TPolyLineBlock.NeedToStopConstruct(Count: Integer): Longint;
 begin
-  // Завершить конструирование можно только с помощью команды VOC_STOPCONSTRUCT
+  // Р—Р°РІРµСЂС€РёС‚СЊ РєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРёРµ РјРѕР¶РЅРѕ С‚РѕР»СЊРєРѕ СЃ РїРѕРјРѕС‰СЊСЋ РєРѕРјР°РЅРґС‹ VOC_STOPCONSTRUCT
   Result := 1;
 end;
 
@@ -2526,11 +2526,11 @@ var
   HitTest: Cardinal;
   Index: Integer;
 begin
-  // Раскладываем Command.HitTest на общий код области и индекс
+  // Р Р°СЃРєР»Р°РґС‹РІР°РµРј Command.HitTest РЅР° РѕР±С‰РёР№ РєРѕРґ РѕР±Р»Р°СЃС‚Рё Рё РёРЅРґРµРєСЃ
   HitTest := prmHitTest and $FFFF0000;
   Index := prmHitTest and $0000FFFF;
-  // В зависимости от HitTest добавляем или удаляем вершину. Вершина не удаляется
-  // если их количество станет меньше двух.
+  // Р’ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ HitTest РґРѕР±Р°РІР»СЏРµРј РёР»Рё СѓРґР°Р»СЏРµРј РІРµСЂС€РёРЅСѓ. Р’РµСЂС€РёРЅР° РЅРµ СѓРґР°Р»СЏРµС‚СЃСЏ
+  // РµСЃР»Рё РёС… РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚Р°РЅРµС‚ РјРµРЅСЊС€Рµ РґРІСѓС….
   case HitTest of
     HT_IN: InsertBasePoint(
             Index + 1,
@@ -2774,7 +2774,7 @@ end;
 function TComplexBlock.CanBe2ndConnObject(prmCL: TConnectionLine;
   prmHT: cardinal): boolean;
 begin
-  // Из объектов предприятия ИП может соединятся только с резервуаром
+  // РР· РѕР±СЉРµРєС‚РѕРІ РїСЂРµРґРїСЂРёСЏС‚РёСЏ РРџ РјРѕР¶РµС‚ СЃРѕРµРґРёРЅСЏС‚СЃСЏ С‚РѕР»СЊРєРѕ СЃ СЂРµР·РµСЂРІСѓР°СЂРѕРј
   Result := not prmCL.IsMeterConnector;
   Result := Result and
     IsPointInside(
@@ -2808,9 +2808,9 @@ begin
   //
   if TypeID <> integer(PU.UnitType)
     then AddError(prmErrorsList, prmErrorObjects,
-      'типы объектов не совпадают - ' +
-      'лог. ' + inttostr(integer(PU.UnitType)) + ', ' +
-      'граф. ' + inttostr(TypeID));
+      'С‚РёРїС‹ РѕР±СЉРµРєС‚РѕРІ РЅРµ СЃРѕРІРїР°РґР°СЋС‚ - ' +
+      'Р»РѕРі. ' + inttostr(integer(PU.UnitType)) + ', ' +
+      'РіСЂР°С„. ' + inttostr(TypeID));
   //
   if (PU is TPlantNodeUnit) then
   begin
@@ -2818,9 +2818,9 @@ begin
     i := PNU.PipesIn.Count + PNU.PipesOut.Count;
     if i <> Connections.Count
       then AddError(prmErrorsList, prmErrorObjects,
-        'не совпадает количество соединений - ' +
-        'лог. ' + inttostr(i)+ ', ' +
-        'граф. ' + inttostr(Connections.Count));
+        'РЅРµ СЃРѕРІРїР°РґР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕРµРґРёРЅРµРЅРёР№ - ' +
+        'Р»РѕРі. ' + inttostr(i)+ ', ' +
+        'РіСЂР°С„. ' + inttostr(Connections.Count));
   end;
   //
   if PU.IsMeterOwner(MetersOwner) then
@@ -2842,9 +2842,9 @@ begin
     end;
     if j <> METLST.List.Count
       then AddError(prmErrorsList, prmErrorObjects,
-        'не совпадает количество измерительных приборов - ' +
-        'лог. ' +  inttostr(METLST.List.Count) + ', ' +
-        'граф. ' + inttostr(j));
+        'РЅРµ СЃРѕРІРїР°РґР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РёР·РјРµСЂРёС‚РµР»СЊРЅС‹С… РїСЂРёР±РѕСЂРѕРІ - ' +
+        'Р»РѕРі. ' +  inttostr(METLST.List.Count) + ', ' +
+        'РіСЂР°С„. ' + inttostr(j));
   end;
 end;
 
@@ -2860,7 +2860,7 @@ function TComplexBlock.CanFinishConnect(prmCL: TConnectionLine): boolean;
 begin
   Result := true;
   //
-  // Из объектов предприятия ИП может соединятся только с резервуаром
+  // РР· РѕР±СЉРµРєС‚РѕРІ РїСЂРµРґРїСЂРёСЏС‚РёСЏ РРџ РјРѕР¶РµС‚ СЃРѕРµРґРёРЅСЏС‚СЃСЏ С‚РѕР»СЊРєРѕ СЃ СЂРµР·РµСЂРІСѓР°СЂРѕРј
   Result := not prmCL.IsMeterConnector;
   //
   if not Result then DeleteConnection(prmCL);
@@ -3265,10 +3265,10 @@ function TComplexBlock.VOCHitTest(prmConvertIntf: ICoordConvert;
 var
   sX1, sY1, sX2, sY2: Integer;
 begin
-  // Переводим в экранные координаты
+  // РџРµСЂРµРІРѕРґРёРј РІ СЌРєСЂР°РЅРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹
   prmConvertIntf.LogToScreen(BasePoints[0].X, BasePoints[0].Y, sX1, sY1);
   prmConvertIntf.LogToScreen(BasePoints[1].X, BasePoints[1].Y, sX2, sY2);
-  // Выявляем область в точке
+  // Р’С‹СЏРІР»СЏРµРј РѕР±Р»Р°СЃС‚СЊ РІ С‚РѕС‡РєРµ
   Result := HT_OUT;
   if (prmParams.XPos > sX1) and (prmParams.XPos < sX2) and
      (prmParams.YPos > sY1) and (prmParams.YPos < sY2)
@@ -3414,10 +3414,10 @@ begin
   //
   FindConnectionObjects(VC);
   //
-  // пересчитываем соединения с ИП
+  // РїРµСЂРµСЃС‡РёС‚С‹РІР°РµРј СЃРѕРµРґРёРЅРµРЅРёСЏ СЃ РРџ
   RecountMeterConnections();
   //
-  // пересечения соединительных линий
+  // РїРµСЂРµСЃРµС‡РµРЅРёСЏ СЃРѕРµРґРёРЅРёС‚РµР»СЊРЅС‹С… Р»РёРЅРёР№
   FillMovingLinesList(Self, prmMovingLines, VC.FObjects);
   //
   Result := true;
@@ -3457,7 +3457,7 @@ begin
   Canvas.FCanvas.Pen.Color := clr;
   Canvas.FCanvas.Brush.Style := bsSolid;
   Canvas.FCanvas.Brush.Color := clr;
-  // Соединяем вершины линиями
+  // РЎРѕРµРґРёРЅСЏРµРј РІРµСЂС€РёРЅС‹ Р»РёРЅРёСЏРјРё
   for i := 1 to VertexesCount - 1 do
   begin
     fl := true;
@@ -3569,7 +3569,7 @@ begin
       pt21.Y := pt02.Y - CD;
     end else
     begin
-      lenAB := sqrt(sqr(pt01.X - pt02.X) + sqr(pt01.Y - pt02.Y)); // длина отрезка
+      lenAB := sqrt(sqr(pt01.X - pt02.X) + sqr(pt01.Y - pt02.Y)); // РґР»РёРЅР° РѕС‚СЂРµР·РєР°
       alpha := GetAngle(pt01, pt02);
       alpha := GetAngleWQ(pt01, pt02, alpha);
       //
@@ -3690,7 +3690,7 @@ begin
     pt1 := Vertex[i];
     pt2 := Vertex[i + 1];
     //
-    // ищем пересечение отрезков линии с отрезками других линий
+    // РёС‰РµРј РїРµСЂРµСЃРµС‡РµРЅРёРµ РѕС‚СЂРµР·РєРѕРІ Р»РёРЅРёРё СЃ РѕС‚СЂРµР·РєР°РјРё РґСЂСѓРіРёС… Р»РёРЅРёР№
     for k := 0 to prmCL2.VertexesCount - 2 do
     begin
       pt3 := prmCL2.Vertex[k];
@@ -3747,13 +3747,13 @@ begin
         //
         m := Length(Intersections);
         SetLength(Intersections, m + 1);
-        // индекс точки линии до пересечения (ТДП)
+        // РёРЅРґРµРєСЃ С‚РѕС‡РєРё Р»РёРЅРёРё РґРѕ РїРµСЂРµСЃРµС‡РµРЅРёСЏ (РўР”Рџ)
         Intersections[m].VertexID := i;
-        // линия, пересечение с которой найдено
+        // Р»РёРЅРёСЏ, РїРµСЂРµСЃРµС‡РµРЅРёРµ СЃ РєРѕС‚РѕСЂРѕР№ РЅР°Р№РґРµРЅРѕ
         Intersections[m].Line := prmCL2;
-        // расстояние от ТДП до точки пересечения
+        // СЂР°СЃСЃС‚РѕСЏРЅРёРµ РѕС‚ РўР”Рџ РґРѕ С‚РѕС‡РєРё РїРµСЂРµСЃРµС‡РµРЅРёСЏ
         Intersections[m].Distance := round(sqrt(sqr(pt.X - pt1.X) + sqr(pt.Y - pt1.Y)));
-        // точка пересечения
+        // С‚РѕС‡РєР° РїРµСЂРµСЃРµС‡РµРЅРёСЏ
         Intersections[m].pt0 := pt;
         //
         mul := 1;
@@ -3982,7 +3982,7 @@ var
   L, alpha: Extended;
   vrtx3: TFloatPoint;
 begin
-  // рисование под углами, кратными 45 градусов, при зажатом Shift
+  // СЂРёСЃРѕРІР°РЅРёРµ РїРѕРґ СѓРіР»Р°РјРё, РєСЂР°С‚РЅС‹РјРё 45 РіСЂР°РґСѓСЃРѕРІ, РїСЂРё Р·Р°Р¶Р°С‚РѕРј Shift
   if (VertexesCount <= 1) or (not prmShift) then exit;
   //
   vrtx1 := Vertex[VertexesCount - 2];
@@ -4106,7 +4106,7 @@ end;
 function TConnectionLine.CanStartConnect(prmCL: TConnectionLine;
   prmHT: Cardinal): boolean;
 begin
-  // СЛ не может начинаться с другой СЛ
+  // РЎР› РЅРµ РјРѕР¶РµС‚ РЅР°С‡РёРЅР°С‚СЊСЃСЏ СЃ РґСЂСѓРіРѕР№ РЎР›
   Result := false;
 end;
 
@@ -4120,9 +4120,9 @@ function TConnectionLine.CanFinishConnect(prmCL: TConnectionLine;
   prmHT: Cardinal): boolean;
 begin
   Result := true;
-  // если соединения не пересекаются
+  // РµСЃР»Рё СЃРѕРµРґРёРЅРµРЅРёСЏ РЅРµ РїРµСЂРµСЃРµРєР°СЋС‚СЃСЏ
   if ((prmHT and $F0000000) <> HT_IN) then Result := false;
-  // если вторая СЛ - соединение с ИП
+  // РµСЃР»Рё РІС‚РѕСЂР°СЏ РЎР› - СЃРѕРµРґРёРЅРµРЅРёРµ СЃ РРџ
   if prmCL.IsMeterConnector and IsMeterConnector then Result := false;
   //
   if not Result then DeleteMeterConnection(prmCL);
@@ -4137,7 +4137,7 @@ var
 begin
   Result := false;
   //
-  // рассчитываем точку прикрепления конструируемой СЛ к СО-СЛ
+  // СЂР°СЃСЃС‡РёС‚С‹РІР°РµРј С‚РѕС‡РєСѓ РїСЂРёРєСЂРµРїР»РµРЅРёСЏ РєРѕРЅСЃС‚СЂСѓРёСЂСѓРµРјРѕР№ РЎР› Рє РЎРћ-РЎР›
   vrtx_id := prmHT and $0FFFFFFF;
   vrtx1 := Vertex[vrtx_id];
   vrtx2 := Vertex[vrtx_id + 1];
@@ -4164,8 +4164,8 @@ end;
 function TConnectionLine.FinishDrag(): boolean;
 var PU: TPlantUnit;
 begin
-  // проверяем, не изменились ли соединяемые объекты
-  // если сменились - соединяем новые
+  // РїСЂРѕРІРµСЂСЏРµРј, РЅРµ РёР·РјРµРЅРёР»РёСЃСЊ Р»Рё СЃРѕРµРґРёРЅСЏРµРјС‹Рµ РѕР±СЉРµРєС‚С‹
+  // РµСЃР»Рё СЃРјРµРЅРёР»РёСЃСЊ - СЃРѕРµРґРёРЅСЏРµРј РЅРѕРІС‹Рµ
   Result := ConnectObjects(PU);
   //
   if Result then
@@ -4230,21 +4230,21 @@ var
     //
     if not Assigned(objG)
       then AddError(prmErrorsList, prmErrorObjects,
-            'объект ' + objN + ' не определен')
+            'РѕР±СЉРµРєС‚ ' + objN + ' РЅРµ РѕРїСЂРµРґРµР»РµРЅ')
       else
         if VC.GetObjectByUniqueName(objG.UniqueName) = nil
           then AddError(prmErrorsList, prmErrorObjects,
-                'объект ' + objN + ' не найден')
+                'РѕР±СЉРµРєС‚ ' + objN + ' РЅРµ РЅР°Р№РґРµРЅ')
           else
             if not Assigned(objG.LogicalUnit)
               then AddError(prmErrorsList, prmErrorObjects,
-                    'объект ' + objN + ' - лог. объект не определен')
+                    'РѕР±СЉРµРєС‚ ' + objN + ' - Р»РѕРі. РѕР±СЉРµРєС‚ РЅРµ РѕРїСЂРµРґРµР»РµРЅ')
               else
                 if objL <> objG.LogicalUnit
                   then AddError(prmErrorsList, prmErrorObjects,
-                        'объект ' + objN + ' - ' +
-                        'лог. объект ' + objL.Name + ' не соответствует ' +
-                        'граф. объекту ' + objG.LogicalUnit.Name);
+                        'РѕР±СЉРµРєС‚ ' + objN + ' - ' +
+                        'Р»РѕРі. РѕР±СЉРµРєС‚ ' + objL.Name + ' РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ ' +
+                        'РіСЂР°С„. РѕР±СЉРµРєС‚Сѓ ' + objG.LogicalUnit.Name);
   end;
 
 begin
@@ -4260,7 +4260,7 @@ begin
   if not (PU is TPipe) then
   begin
     AddError(prmErrorsList, prmErrorObjects,
-      'лог. объект не соответствует граф. объекту');
+      'Р»РѕРі. РѕР±СЉРµРєС‚ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РіСЂР°С„. РѕР±СЉРµРєС‚Сѓ');
     exit;
   end;
   //
@@ -4274,14 +4274,14 @@ begin
     if not MC.Line.IsMeterConnector then
     begin
       AddError(prmErrorsList, prmErrorObjects,
-        'линия ' + MC.Line.UniqueName + ' не является соединительной с ИП');
+        'Р»РёРЅРёСЏ ' + MC.Line.UniqueName + ' РЅРµ СЏРІР»СЏРµС‚СЃСЏ СЃРѕРµРґРёРЅРёС‚РµР»СЊРЅРѕР№ СЃ РРџ');
       continue;
     end;
     //
     if not (MC.Line.Object1 is TGraphMeter) then
     begin
       AddError(prmErrorsList, prmErrorObjects,
-        'линия ' + MC.Line.UniqueName + ' соединяет не с ИП');
+        'Р»РёРЅРёСЏ ' + MC.Line.UniqueName + ' СЃРѕРµРґРёРЅСЏРµС‚ РЅРµ СЃ РРџ');
       continue;
     end;
     //
@@ -4293,15 +4293,15 @@ begin
   end;
   if j <> PIP.Meters.List.Count
     then AddError(prmErrorsList, prmErrorObjects,
-          'не совпадает количество измерительных приборов - ' +
-          'лог. ' + inttostr(PIP.Meters.List.Count) + ', ' +
-          'граф. ' + inttostr(j));
+          'РЅРµ СЃРѕРІРїР°РґР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РёР·РјРµСЂРёС‚РµР»СЊРЅС‹С… РїСЂРёР±РѕСЂРѕРІ - ' +
+          'Р»РѕРі. ' + inttostr(PIP.Meters.List.Count) + ', ' +
+          'РіСЂР°С„. ' + inttostr(j));
   //
   if MeterConnections.Count <> PIP.Meters.Count
     then AddError(prmErrorsList, prmErrorObjects,
-          'не совпадает количество измерительных приборов: ' +
-          'лог. = ' + inttostr(PIP.Meters.Count) + ', ' +
-          'граф. = ' + inttostr(MeterConnections.Count));
+          'РЅРµ СЃРѕРІРїР°РґР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РёР·РјРµСЂРёС‚РµР»СЊРЅС‹С… РїСЂРёР±РѕСЂРѕРІ: ' +
+          'Р»РѕРі. = ' + inttostr(PIP.Meters.Count) + ', ' +
+          'РіСЂР°С„. = ' + inttostr(MeterConnections.Count));
   //
   CheckObject(1);
   CheckObject(2);
@@ -4352,8 +4352,8 @@ function TConnectionLine.ConnectObjects(var prmPU: TPlantUnit): boolean;
 begin
   Result := false;
   //
-  // проверяем, разорвана ли связь между объектами
-  // и обрабатываем разрыв связи
+  // РїСЂРѕРІРµСЂСЏРµРј, СЂР°Р·РѕСЂРІР°РЅР° Р»Рё СЃРІСЏР·СЊ РјРµР¶РґСѓ РѕР±СЉРµРєС‚Р°РјРё
+  // Рё РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј СЂР°Р·СЂС‹РІ СЃРІСЏР·Рё
   CheckDisconnection();
   //
   if not Assigned(preObject1) then exit;
@@ -4585,7 +4585,7 @@ end;
 
 function TGraphMeter.CanFinishConnect(prmCL: TConnectionLine): boolean;
 begin
-  // Cоединение с ИП начинается ОБЯЗАТЕЛЬНО с ИП и не может им заканчиваться
+  // CРѕРµРґРёРЅРµРЅРёРµ СЃ РРџ РЅР°С‡РёРЅР°РµС‚СЃСЏ РћР‘РЇР—РђРўР•Р›Р¬РќРћ СЃ РРџ Рё РЅРµ РјРѕР¶РµС‚ РёРј Р·Р°РєР°РЅС‡РёРІР°С‚СЊСЃСЏ
   Result := false;
   //
   DeleteConnection(prmCL);
@@ -4595,7 +4595,7 @@ function TGraphMeter.CanStartConnect(prmCL: TConnectionLine): boolean;
 begin
   Result := true;
   //
-  // у ИП может быть только одно соединение
+  // Сѓ РРџ РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚РѕР»СЊРєРѕ РѕРґРЅРѕ СЃРѕРµРґРёРЅРµРЅРёРµ
   if (Connections.Count > 0) then Result := false;
   //
   if not Result then DeleteConnection(prmCL);
@@ -4621,13 +4621,13 @@ begin
   if not Assigned(LogicalUnit) then exit;
   MET1 := TMeter(LogicalUnit);
   //
-  // проверка на соединения
+  // РїСЂРѕРІРµСЂРєР° РЅР° СЃРѕРµРґРёРЅРµРЅРёСЏ
   for i := 0 to Connections.Count - 1 do
   begin
     CL := TConnectionLine(Connections[i]);
     if not CL.IsMeterConnector then
       AddError(prmErrorsList, prmErrorObjects,
-        'линия ' + CL.UniqueName + ' не является соединительной с ИП');
+        'Р»РёРЅРёСЏ ' + CL.UniqueName + ' РЅРµ СЏРІР»СЏРµС‚СЃСЏ СЃРѕРµРґРёРЅРёС‚РµР»СЊРЅРѕР№ СЃ РРџ');
     //
     if not Assigned(CL.Object2) then continue;
     if not Assigned(CL.Object2.LogicalUnit) then continue;
@@ -4635,7 +4635,7 @@ begin
     if not CL.Object2.LogicalUnit.IsMeterOwner(MetersOwner) then
     begin
       AddError(prmErrorsList, prmErrorObjects,
-        CL.Object2.UniqueName + ' не может быть соединён с ИП');
+        CL.Object2.UniqueName + ' РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ СЃРѕРµРґРёРЅС‘РЅ СЃ РРџ');
       continue;
     end;
     //
@@ -4643,12 +4643,12 @@ begin
     if not METLST.IsMeterExits(MET1) then
     begin
       AddError(prmErrorsList, prmErrorObjects,
-        'ИП не прикреплен к лог. объекту ' + CL.Object2.UniqueName);
+        'РРџ РЅРµ РїСЂРёРєСЂРµРїР»РµРЅ Рє Р»РѕРі. РѕР±СЉРµРєС‚Сѓ ' + CL.Object2.UniqueName);
       continue;
     end;
   end;  
   //
-  // проверка на дубли тегов ИП
+  // РїСЂРѕРІРµСЂРєР° РЅР° РґСѓР±Р»Рё С‚РµРіРѕРІ РРџ
   for i := 0 to VC.LogicalSchema.Units.Count - 1 do
   begin
     PU := TPlantUnit(VC.LogicalSchema.Units[i]);
@@ -4661,7 +4661,7 @@ begin
        (MET2.TagID <> 0) and
        (MET1.TagID = MET2.TagID) then
         AddError(prmErrorsList, prmErrorObjects,
-          'совпадение тэга с ' + MET2.Name);
+          'СЃРѕРІРїР°РґРµРЅРёРµ С‚СЌРіР° СЃ ' + MET2.Name);
   end;
 end;
 
@@ -4777,7 +4777,7 @@ begin
     MakeObjects(jso, Primitives);
   end;
   //
-  // индентификация поля его текстом, так как UniqueName может быть пустым
+  // РёРЅРґРµРЅС‚РёС„РёРєР°С†РёСЏ РїРѕР»СЏ РµРіРѕ С‚РµРєСЃС‚РѕРј, С‚Р°Рє РєР°Рє UniqueName РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј
   for i := 0 to Primitives.Count - 1 do
     if TBaseVisualObject(Primitives[i]) is TTextBlock then
       TTextBlock(Primitives[i]).FieldName := TTextBlock(Primitives[i]).Text;
